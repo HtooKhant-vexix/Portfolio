@@ -48,7 +48,7 @@ function App() {
           show && "-translate-y-40"
         } delay-500 duration-500 fixed w-full`}
       >
-        <div className="w-full flex justify-center bg-white bg-opacity-90 ">
+        <div className="w-full flex z-[50] justify-center bg-white bg-opacity-90 ">
           <Nav />
         </div>
       </div>

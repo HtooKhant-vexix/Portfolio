@@ -41,10 +41,10 @@ const NavLinks = [
 const Home = () => {
   const [state, setState] = useState(false);
   return (
-    <div className="h-[600px] flex items-center m-16 mt-10 rounded-3xl bg-white bg-opacity-40 border-white border-2">
+    <div className="h-[600px] flex z-10 items-center m-12 mt-10 rounded-3xl bg-white bg-opacity-40 border-white border-2">
       {/* sidebar  */}
-      <div className=" justify-center absolute sm:flex hidden items-start flex-col">
-        <img className="h-[70px] mb-4 ml-4" src={logo} alt="" />
+      <div className=" justify-center absolute z-[2] sm:flex hidden items-start flex-col">
+        <img className="h-[70px] mb-4 ml-4 z-0" src={logo} alt="" />
         <ul
           onMouseEnter={() => {
             setState(true);
@@ -52,7 +52,7 @@ const Home = () => {
           onMouseLeave={() => {
             setState(false);
           }}
-          className="list-none  w-[150px] items-start flex-col text-primary justify-center flex-1"
+          className="list-none z-0  w-[150px] items-start flex-col text-primary justify-center flex-1"
         >
           {NavLinks.map((e) => (
             <li
@@ -72,12 +72,30 @@ const Home = () => {
         </ul>
       </div>
       {/* hero */}
-      <div className="text-[6rem] justify-center flex-wrap flex w-full mx-auto font-poppins font-bold ">
-        <div className="md:me-28 lg:me-36">
+      <div className="justify-around flex-wrap flex w-full mx-auto">
+        <div className="lg:me-[-140px]">
           <img src={pfp} className="h-[30rem]" alt="" />
         </div>
-        <div className="min-w-[250px] w-[450px] bg-red-300 ">
-          <h1 className="text-gradient inline-block"> hello</h1>
+        <div className="flex flex-col  justify-center w-[570px]">
+          <div className="w-[100%]">
+            <div className="font-poppins text-primary leading-5 text-[30px]">
+              Hello, I am <span className="font-semibold">
+              Htoo Khant
+            </span>
+            </div>
+           
+            <h1 className="text-gradient font-bold text-[55px] inline-block">
+              Front-end Developer
+            </h1>
+            <h1 className="text-primary flex w-[90%] text-[20px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aut
+              provident obcaecati dolorum adipisci pariatur quis totam minus non
+              nobis?
+            </h1>
+            <button className="font-poppins flex p-4 px-6 mt-5 bg-secondary rounded-full font-semibold text-[1rem] text-white">
+              View Works
+            </button>
+          </div>
         </div>
       </div>
     </div>
