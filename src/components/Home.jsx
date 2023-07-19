@@ -73,28 +73,29 @@ const Home = () => {
       </div>
       {/* hero */}
       <div className="justify-around flex-wrap flex w-full mx-auto">
-        <div className="lg:me-[-140px]">
-          <img src={pfp} className="h-[30rem]" alt="" />
+        <div className="md:me-[-60px] w-[32rem]  lg:me-[-140px]">
+          <img src={pfp} className="w-[100%]" alt="" />
         </div>
         <div className="flex flex-col  justify-center w-[570px]">
           <div className="w-[100%]">
             <div className="font-poppins text-primary leading-5 text-[30px]">
-              Hello, I am <span className="font-semibold">
-              Htoo Khant
-            </span>
+              Hello, I am <span className="text-primary font-semibold">Htoo Khant</span>
             </div>
-           
+
             <h1 className="text-gradient font-bold text-[55px] inline-block">
               Front-end Developer
             </h1>
-            <h1 className="text-primary flex w-[90%] text-[20px]">
+            <h1 className="text-primary flex w-[95%] text-[25px]">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aut
               provident obcaecati dolorum adipisci pariatur quis totam minus non
               nobis?
             </h1>
-            <button className="font-poppins flex p-4 px-6 mt-5 bg-secondary rounded-full font-semibold text-[1rem] text-white">
+            <motion.button
+              whileHover={{scaleX:2}}
+              className="font-poppins flex p-4 px-6 mt-5 bg-secondary rounded-full font-semibold text-[1rem] text-white"
+            >
               View Works
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
