@@ -41,14 +41,14 @@ function App() {
     }
   }, [lastScrollY]);
   return (
-    <div className=" w-full overflow-hidden bg-img">
+    <div className=" w-full overflow-hidden h-[2000px] bg-img">
       {/* <div className="fixed w-full"> */}
       <div
         className={`active ${
           show && "-translate-y-40"
-        } delay-500 duration-500 fixed w-full`}
+        } delay-500 duration-500 fixed w-full z-50`}
       >
-        <div className="w-full flex z-[50] justify-center backdrop-blur-md bg-white bg-opacity-80 ">
+        <div className="w-full flex z-10 justify-center relative backdrop-blur-md bg-white bg-opacity-80 ">
           <Nav />
         </div>
       </div>
