@@ -1,47 +1,20 @@
 import React from "react";
 import logo from "../assets/logo2.png";
-import { GoHomeFill, GoPersonFill } from "react-icons/go";
-import { PiGearSixFill } from "react-icons/pi";
-import { HiMail, HiBriefcase } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import pfp from "../assets/PFP.png";
+import { NavLink } from "react-router-dom";
+import NavLinks from "../constants";
+import Contact from "../constants/Contact";
+import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
 };
-const NavLinks = [
-  {
-    id: 1,
-    label: "Home",
-    icon: <GoHomeFill />,
-  },
-  {
-    id: 2,
-    label: "About",
-    icon: <GoPersonFill />,
-  },
-  {
-    id: 3,
-    label: "Service",
-    icon: <PiGearSixFill />,
-  },
-  {
-    id: 4,
-    label: "Work",
-    icon: <HiBriefcase />,
-  },
-  {
-    id: 5,
-    label: "Contact",
-    icon: <HiMail />,
-  },
-];
-
 const Home = () => {
   const [state, setState] = useState(false);
   return (
-    <div className="py-6 px-8 sm:px-0  flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
+    <div className="py-6 pb-14 sm:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
       {/* sidebar  */}
       <motion.div
         whileInView={{ opacity: 1, x: 1 }}
@@ -61,19 +34,23 @@ const Home = () => {
             className="list-none z-0  mt-16 md:mt-0   w-[150px] items-start flex-col text-primary justify-center flex-1"
           >
             {NavLinks.map((e) => (
-              <li
-                key={e.id}
-                className="hover:text-secondary rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold cursor-pointer flex items-center mr-2 font-poppins"
-              >
-                <div className="flex p-4 justify-start text-2xl">{e.icon}</div>
-                <motion.div
-                  animate={state ? "open" : "close"}
-                  variants={list}
-                  className="flex"
+              <NavLink to={`/${e.name}`}>
+                <li
+                  key={e.id}
+                  className="hover:text-secondary rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold cursor-pointer flex items-center mr-2 font-poppins"
                 >
-                  {e.label}
-                </motion.div>
-              </li>
+                  <div className="flex p-4 justify-start text-2xl">
+                    {e.icon}
+                  </div>
+                  <motion.div
+                    animate={state ? "open" : "close"}
+                    variants={list}
+                    className="flex"
+                  >
+                    {e.label}
+                  </motion.div>
+                </li>
+              </NavLink>
             ))}
           </ul>
         </div>
@@ -85,9 +62,9 @@ const Home = () => {
           <motion.img
             whileInView={{ scale: 1, opacity: 1 }}
             initial={{ scale: 0, opacity: 0.5 }}
-            transition={{ type: "spring", stiffness: 60,delay:0.1 }}
+            transition={{ type: "spring", stiffness: 60, delay: 0.1 }}
             src={pfp}
-            className="w-[100%] z-50 mb-10 md:mb-0"
+            className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
             alt=""
           />
         </div>
@@ -112,13 +89,37 @@ const Home = () => {
               goals for tomorrow.
             </h1>
             <div className="flex justify-center md:justify-start">
-              <motion.button className="font-poppins flex p-4 px-6 mt-5 bg-secondary rounded-full font-semibold sm:text-[0.7] md:text-[1rem] text-white">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                className="font-poppins relative flex sm:p-3 group sm:px-6 mt-5 hover:shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
+              >
                 View Works
+                <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" />
               </motion.button>
             </div>
           </div>
         </motion.div>
       </div>
+      <motion.div
+        whileInView={{ y: 1, opacity: 1 }}
+        initial={{ y: "-100%", opacity: 0 }}
+        transition={{ type: "spring", stiffness: 40, delay: 0.8 }}
+        className="absolute bottom-[-35px] h-16 inset-x-0"
+      >
+        <div className="flex w-[200px]  shadow-2xl shadow-primary/50 px-4 text-primary items-center justify-around text-[2rem] bg-white rounded-full h-full mx-auto">
+          {Contact.map((e) => (
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 500 }}
+              className="hover:text-secondary"
+              href={e.link}
+            >
+              {e.icon}
+            </motion.a>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

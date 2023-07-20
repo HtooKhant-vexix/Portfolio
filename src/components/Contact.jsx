@@ -10,17 +10,16 @@ const Contact = () => {
   return (
     <div className="h-screen flex  flex-col justify-center items-center">
       <motion.div
-      animate={isOpen?"right":"left"}
-      variants={variants}
-      className="w-[200px] h-[200px] bg-red-300">
-
-      </motion.div>
+        animate={isOpen ? "right" : "left"}
+        variants={variants}
+        className="w-[200px] h-[200px] bg-red-300"
+      ></motion.div>
       <div
-      onMouseEnter={()=>setIsOpen(true)}
-      onMouseLeave={()=>setIsOpen(false)}
-      className="w-[200px] mt-4 h-[200px] bg-yellow-300">
-
-      </div>
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        className="w-[200px] mt-4 h-[200px] bg-yellow-300"
+      ></div>
+      <div className="w-[200px] mt-4 h-[200px] animate-fade-right animate-infinite bg-yellow-300"></div>
     </div>
   );
 };
