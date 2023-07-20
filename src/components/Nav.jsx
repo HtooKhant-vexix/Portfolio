@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo2.png";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import NavLinks from "../constants";
+import NavLinks from "../constants/Index";
 
 
 const Nav = () => {
