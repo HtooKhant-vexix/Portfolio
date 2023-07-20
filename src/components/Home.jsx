@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo2.png";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import pfp from "../assets/PFP.webp";
+// import pfp from "../assets/PFP.webp";
 import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
