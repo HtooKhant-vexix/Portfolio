@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import pfp from "../assets/PFP.webp";
 import { NavLink } from "react-router-dom";
-import NavLinks from "../constants";
+import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
-import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
