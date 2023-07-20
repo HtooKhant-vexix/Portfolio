@@ -61,7 +61,7 @@ const Home = () => {
           <motion.img
             whileInView={{ scale: 1, opacity: 1 }}
             initial={{ scale: 0, opacity: 0.5 }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.1 }}
+            transition={{ type: "spring", stiffness: 60, delay: 0.3 }}
             src={pfp}
             className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
             alt=""
@@ -70,7 +70,7 @@ const Home = () => {
         <motion.div
           whileInView={{ x: 1, opacity: 1 }}
           initial={{ x: "100%", opacity: 0 }}
-          transition={{ type: "spring", stiffness: 40, delay: 0.8 }}
+          transition={{ type: "spring", stiffness: 40, delay: 0.9 }}
           className="flex flex-col text-center md:text-start justify-center w-[570px]"
         >
           <div className="w-[100%]">
