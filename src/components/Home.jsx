@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import pfp from "../assets/PFP.png";
 import { NavLink } from "react-router-dom";
-import NavLinks from "../constants";
+import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
-import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
@@ -95,7 +94,7 @@ const Home = () => {
                 className="font-poppins relative flex sm:p-3 group sm:px-6 mt-5 hover:shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
               >
                 View Works
-                <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" />
+                {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
               </motion.button>
             </div>
           </div>
