@@ -113,7 +113,7 @@ const Home = () => {
                 //  transform hover:scale-x-150
                 className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
               >
-                <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite    hidden group-hover:flex z-50 " />
+                <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
                 <div
                   style={{ "transform-origin": "left center" }}
                   className="group-hover:bg-primary duration-300 transition-transform transform group-hover:translate-x-8 absolute w-4 h-full z-10 inset-y-0 right-0 rounded-r-xl "
