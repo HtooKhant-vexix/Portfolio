@@ -6,6 +6,7 @@ import pfp from "../assets/PFP.webp";
 import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
+import { FiChevronsRight } from "react-icons/fi";
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
@@ -36,7 +37,7 @@ const Home = () => {
               <NavLink to={`/${e.name}`}>
                 <li
                   key={e.id}
-                  className="hover:text-secondary rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold cursor-pointer flex items-center mr-2 font-poppins"
+                  className="hover:text-secondary group rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold cursor-pointer flex items-center mr-2 font-poppins"
                 >
                   <div className="flex p-4 justify-start text-2xl">
                     {e.icon}
@@ -59,9 +60,14 @@ const Home = () => {
       <div className="justify-around flex-wrap flex w-full mx-auto">
         <div className="md:me-[-60px] w-[32rem] lg:me-[-140px]">
           <motion.img
-            whileInView={{ x:1, opacity: 1 }}
-            initial={{ x:"-100%", opacity: 0 }}
-            transition={{ type: "spring", stiffness: 40, delay: 0.4 }}
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "-100%", opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 40,
+              delay: 0.4,
+              ease: "easeOut",
+            }}
             src={pfp}
             className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
             alt=""
@@ -78,7 +84,12 @@ const Home = () => {
         <motion.div
           whileInView={{ x: 1, opacity: 1 }}
           initial={{ x: "100%", opacity: 0 }}
-          transition={{ type: "spring", stiffness: 40, delay: 0.7 }}
+          transition={{
+            type: "spring",
+            stiffness: 40,
+            ease: "easeOut",
+            delay: 0.7,
+          }}
           className="flex flex-col text-center md:text-start justify-center w-[570px]"
         >
           <div className="w-[100%]">
@@ -99,8 +110,18 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400 }}
-                className="font-poppins relative flex sm:p-3 group sm:px-6 mt-5 hover:shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
+                //  transform hover:scale-x-150
+                className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
               >
+                <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite    hidden group-hover:flex z-50 " />
+                <div
+                  style={{ "transform-origin": "left center" }}
+                  className="group-hover:bg-primary duration-300 transition-transform transform group-hover:translate-x-8 absolute w-4 h-full z-10 inset-y-0 right-0 rounded-r-xl "
+                ></div>
+                <div
+                  style={{ "transform-origin": "left center" }}
+                  className="group-hover:bg-primary duration-300  transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
+                ></div>
                 View Works
                 {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
               </motion.button>

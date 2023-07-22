@@ -17,7 +17,7 @@ const Contact = () => {
       <div
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-        className="w-[200px] mt-4 h-[200px] bg-yellow-300"
+        className="w-[200px] transform hover:scale-x-150 mt-4 h-[200px] bg-yellow-300"
       ></div>
       <div className="w-[200px] mt-4 h-[200px] animate-fade-right animate-infinite bg-yellow-300"></div>
     </div>
