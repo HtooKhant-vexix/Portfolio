@@ -18,7 +18,7 @@ const Home = () => {
       <motion.div
         whileInView={{ opacity: 1, x: 1 }}
         initial={{ opacity: 0, x: "-100%" }}
-        transition={{ type: "spring", stiffness: 50, delay: 0.5 }}
+        transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
         className="absolute"
       >
         <div className=" justify-center hidden sm:flex   z-10 items-start flex-col">
@@ -61,15 +61,15 @@ const Home = () => {
           <motion.img
             whileInView={{ x:1, opacity: 1 }}
             initial={{ x:"-100%", opacity: 0 }}
-            transition={{ type: "spring", stiffness: 50, delay: 0.1 }}
+            transition={{ type: "spring", stiffness: 40, delay: 0.4 }}
             src={pfp}
             className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
             alt=""
           />
           {/* <motion.img
-            whileInView={{ scale: 1, opacity: 1 }}
-            initial={{ scale: 0, opacity: 0.5 }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.3 }}
+            whileInView={{ x:1, opacity: 1 }}
+            initial={{ x:"-100%", opacity: 0 }}
+            transition={{ type: "spring", stiffness: 50, delay: 0.1 }}
             src={pfp}
             className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
             alt=""
