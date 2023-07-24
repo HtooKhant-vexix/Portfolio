@@ -93,7 +93,7 @@ const Home = () => {
           className="flex flex-col text-center md:text-start justify-center w-[570px]"
         >
           <div className="w-[100%]">
-            <div className="font-poppins text-primary leading-5 text-[23px] xs:text-[27px] ss:text-[30px] sm:text-[35px]">
+            <div className="font-poppins text-primary leading-6 text-[23px] xs:text-[27px] ss:text-[30px] sm:text-[35px]">
               Hello, I am
               <span className="text-primary font-semibold"> Htoo Khant</span>
             </div>
@@ -101,7 +101,7 @@ const Home = () => {
             <h1 className="text-gradient font-bold text-[28px] ss:text-[45px] xs:text-[38px] sm:text-[55px] inline-block">
               Front-end Developer
             </h1>
-            <h1 className="text-primary xs:w-[85%] sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
+            <h1 className="text-primary pt-1 sm:pt-0 xs:w-[85%] sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
               My mission as a frontend developer is simple yet powerful: to
               bring your vision to life. Your success is my success, and I'm
               committed to delivering results that exceed your expectations.
