@@ -98,7 +98,7 @@ const Home = () => {
               <span className="text-primary font-semibold"> Htoo Khant</span>
             </div>
 
-            <h1 className="text-gradient font-bold text-[28px] ss:text-[45px] xs:text-[38px] sm:text-[55px] inline-block">
+            <h1 className="text-gradient font-bold text-[30px] ss:text-[45px] xs:text-[38px] sm:text-[55px] inline-block">
               Front-end Developer
             </h1>
             <h1 className="text-primary pt-1 sm:pt-0 xs:w-[85%] sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
