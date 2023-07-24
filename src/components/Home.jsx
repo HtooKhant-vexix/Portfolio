@@ -101,10 +101,10 @@ const Home = () => {
             <h1 className="text-gradient font-bold text-[28px] ss:text-[45px] xs:text-[38px] sm:text-[55px] inline-block">
               Front-end Developer
             </h1>
-            <h1 className="text-primary xs:w-[85%] sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
-              A developer who delivers fast and reliable websites. I care about
-              your business values and targeted customers to meet your golden
-              goals for tomorrow.
+            <h1 className="text-primary xs:w-[85%] leading-9 sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
+              My mission as a frontend developer is simple yet powerful: to
+              bring your vision to life. Your success is my success, and I'm
+              committed to delivering results that exceed your expectations.
             </h1>
             <div className="flex justify-center md:justify-start">
               <motion.button
