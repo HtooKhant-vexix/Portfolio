@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import './index.css'
 import { Route, Routes } from "react-router-dom";
+// import navigation from "./assets/navigation.png"
 import {
   About,
   Service,
@@ -10,6 +12,7 @@ import {
   Nav,
   Footer,
 } from "./components/index";
+import { Card } from "antd";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -41,7 +44,7 @@ function App() {
     }
   }, [lastScrollY]);
   return (
-    <div className=" w-full overflow-hidden h-[2000px] bg-img">
+    <div className=" w-full overflow-hidden h-[2000px] bg-img app" >
       {/* <div className="fixed w-full"> */}
       <div
         className={`active ${
@@ -61,6 +64,7 @@ function App() {
             <Route path="/Service" element={<Service />} />
             <Route path="/Work" element={<Work />} />
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/Card" element={<Card />} />
           </Routes>
         </div>
       </div>

@@ -43,3 +43,6 @@
 .bg-img {
   background-image: url("https://assets.website-files.com/62d52b6d074c2e318f479724/62d530867556588cd0f37242_hero-bg.webp");
 }
+.custom-cursor-target {
+  cursor: url('assets/pointer.png'), auto;
+}
