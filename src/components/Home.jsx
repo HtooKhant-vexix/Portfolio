@@ -153,7 +153,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className="w-full bg-primary mt-32">
+      <div className=" mt-24">
         <Card />
         <Works />
       </div>
