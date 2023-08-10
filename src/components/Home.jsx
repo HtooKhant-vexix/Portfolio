@@ -1,23 +1,65 @@
 import React from "react";
 import logo from "../assets/logo2.png";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import pfp from "../assets/PFP.webp";
 import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
 import { FiChevronsRight } from "react-icons/fi";
 import Works from "./Works";
-import '../index.css'
+import "../index.css";
 import Card from "./Card";
+import { useState } from "react";
+
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
 };
 const Home = () => {
   const [state, setState] = useState(false);
+
+  // const pointer = {
+  //   cursor : '../assets/pointer.png'
+  // }
+  // const cs = useRef(null);
+  // const cursorVisible = useRef(true);
+  // // const cursorEnlarged = useRef(false);
+  // const endX = useRef(window.innerWidth / 2);
+  // const endY = useRef(window.innerHeight / 2);
+  // const _x = useRef(0);
+  // const _y = useRef(0);
+  // const requestRef = useRef(null);
+  // const toggleCursor = () =>{
+  //   if(cursorVisible.current){
+  //     cs.current.style.opacity = 1;
+  //   }else{
+  //     cs.current.style.opacity = 0;
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   document.addEventListener("mousemove", mouseMoveEvent);
+  //   return () => document.removeEventListener("mousemove", mouseMoveEvent);
+  // },[]);
+
+  // const mouseMoveEvent = (e) => {
+  //   cursorVisible.current =true;
+  //   toggleCursor();
+  //   endX.current = e.pageX;
+  //   endY.current = e.pageY;
+  //   cs.current.style.top = (endY.current-20) + "px";
+  //   cs.current.style.left = (endX.current-20) + "px";
+
+  // };
+
   return (
     <>
+      {/* <img
+        src={pt}
+        ref={cs}
+        alt=""
+        className="z-50 opacity-0 h w-8 h-8 pointer-events-none absolute overflow-hidden top-[50%] right-[50%] translate-x-[50%] translate-y-[50%] "
+      /> */}
       <div className="py-6 pb-14 sm:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
         {/* sidebar  */}
         <motion.div
@@ -41,7 +83,7 @@ const Home = () => {
                 <NavLink to={`/${e.name}`}>
                   <li
                     key={e.id}
-                    className="hover:text-secondary group rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold cursor-pointer flex items-center mr-2 font-poppins"
+                    className="hover:text-secondary group rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold flex items-center mr-2 font-poppins"
                   >
                     <div className="flex p-4 justify-start text-2xl">
                       {e.icon}
@@ -110,12 +152,12 @@ const Home = () => {
                 bring your vision to life. Your success is my success, and I'm
                 committed to delivering results that exceed your expectations.
               </h1>
-              <div className="flex justify-center md:justify-start">
+              <div className="flex cursor-none justify-center md:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400 }}
                   //  transform hover:scale-x-150
-                  className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
+                  className="font-poppins cursor-none flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
                 >
                   <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
                   <div
@@ -124,7 +166,7 @@ const Home = () => {
                   ></div>
                   <div
                     style={{ "transform-origin": "left center" }}
-                    className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
+                    className="group-hover:bg-primary cursor-none duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
                   ></div>
                   View Works
                   {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}

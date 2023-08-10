@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import './index.css'
+import "./index.css";
 import { Route, Routes } from "react-router-dom";
 // import navigation from "./assets/navigation.png"
 import {
@@ -13,6 +13,7 @@ import {
   Footer,
 } from "./components/index";
 import { Card } from "antd";
+import Cursor from "./components/cursor";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -43,37 +44,42 @@ function App() {
       };
     }
   }, [lastScrollY]);
-  return (
-    <div className=" w-full overflow-hidden h-[2000px] bg-img app" >
-      {/* <div className="fixed w-full"> */}
-      <div
-        className={`active ${
-          show && "-translate-y-40"
-        } delay-500 duration-500 fixed w-full z-50`}
-      >
-        <div className="w-full flex z-10 justify-center relative backdrop-blur-md bg-white bg-opacity-80 ">
-          <Nav />
-        </div>
-      </div>
 
-      <div className="">
+  return (
+    <>
+      <Cursor />
+      <div className=" w-full overflow-hidden bg-img app">
+        {/* <div className="fixed w-full"> */}
+        <div
+          className={`active ${
+            show && "-translate-y-40"
+          } delay-500 duration-500 fixed w-full z-50`}
+        >
+          <div className="w-full flex z-40 justify-center relative backdrop-blur-md bg-white bg-opacity-80 ">
+            <Nav />
+          </div>
+        </div>
+
         <div className="">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="About" element={<About />} />
-            <Route path="/Service" element={<Service />} />
-            <Route path="/Work" element={<Work />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Card" element={<Card />} />
-          </Routes>
+          <div className="">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="About" element={<About />} />
+              <Route path="/Service" element={<Service />} />
+              <Route path="/Work" element={<Work />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Card" element={<Card />} />
+            </Routes>
+          </div>
+        </div>
+
+        <div className="">
+          <div className="">
+            <Footer />
+          </div>
         </div>
       </div>
-      <div className="">
-        <div className="">
-          <Footer />
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
 
