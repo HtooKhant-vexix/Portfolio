@@ -17,7 +17,7 @@ const Nav = () => {
             <motion.li
               whileHover={{ scale: 1.2 }}
               key={e.id}
-              className="hover:text-secondary duration-75 items-center py-8 text-sm font-semibold cursor-pointer flex px-6 mr-2 font-poppins"
+              className="hover:text-secondary cursor-none duration-75 items-center py-8 text-sm font-semibold flex px-6 mr-2 font-poppins"
             >
               <div className="flex me-2 text-2xl">{e.icon}</div>
               {e.label}

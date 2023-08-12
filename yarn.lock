@@ -3046,7 +3046,7 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 swiper@^10.1.0:
   version "10.1.0"
-  resolved "https://registry.npmjs.org/swiper/-/swiper-10.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-10.1.0.tgz#02536bcf34ba0c37cf837c5193005a8e87aa43c8"
   integrity sha512-E+wh+hcSbwlRfXuwBTclcOOikOjNdSF0a2Sdg3J4cIWtHO64A7SaLRfezfrJ67CW3GEc15AduYU2YKlElsjqsQ==
 
 tailwindcss-animated@^1.0.1:

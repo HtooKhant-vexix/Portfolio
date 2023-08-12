@@ -8,8 +8,9 @@ import Contact from "../constants/Contact";
 import { FiChevronsRight } from "react-icons/fi";
 import Works from "./Works";
 import "../index.css";
-import Card from "./Card";
+import Card from "./card/Card";
 import { useState } from "react";
+import CardList from "./card/CardList";
 
 const list = {
   open: { x: 2, opacity: 1 },
@@ -60,7 +61,7 @@ const Home = () => {
         alt=""
         className="z-50 opacity-0 h w-8 h-8 pointer-events-none absolute overflow-hidden top-[50%] right-[50%] translate-x-[50%] translate-y-[50%] "
       /> */}
-      <div className="py-6 pb-14 sm:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
+      <div className="py-6 pb-14 sm:pb-12 md:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
         {/* sidebar  */}
         <motion.div
           whileInView={{ opacity: 1, x: 1 }}
@@ -196,7 +197,7 @@ const Home = () => {
         </motion.div>
       </div>
       <div className=" mt-24">
-        <Card />
+        <CardList />
         <Works />
       </div>
     </>

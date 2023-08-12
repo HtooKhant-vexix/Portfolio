@@ -5,6 +5,10 @@ import cstyle from "./cursor.module.css";
 const Cursor = () => {
   const cs = useRef(null);
 
+  const handleMouseLeave = () => {
+    console.log("Mouse left the document.");
+  };
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
@@ -14,9 +18,11 @@ const Cursor = () => {
     };
 
     document.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
