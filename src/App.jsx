@@ -13,7 +13,7 @@ import {
   Footer,
 } from "./components/index";
 import { Card } from "antd";
-import Cursor from "./components/cursor";
+import Cursor from "./components/Cursor";
 
 function App() {
   const [show, setShow] = useState(true);
