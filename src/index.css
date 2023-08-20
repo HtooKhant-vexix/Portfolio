@@ -44,5 +44,6 @@
 }
 
 * {
-  cursor: none;
+  cursor: url(./assets/cursor.svg), auto !important;
+  /* cursor: url(./assets/pointer.svg), auto !important; */
 }

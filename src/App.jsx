@@ -13,7 +13,6 @@ import {
   Footer,
 } from "./components/index";
 import { Card } from "antd";
-import Cursor from "./components/Cursor";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -47,7 +46,6 @@ function App() {
 
   return (
     <>
-      <Cursor />
       <div className=" w-full h-[2000px] overflow-hidden bg-img app">
         {/* <div className="fixed w-full"> */}
         <div

@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const Card = ({ img, logo, title, desc }) => {
+const Card = ({ img, logo, title, desc,dl }) => {
   const [str, setStr] = useState(true);
 
   const strChange = () => setStr((prevStr) => !prevStr);
@@ -16,16 +16,16 @@ const Card = ({ img, logo, title, desc }) => {
   const truncatedDesc = str ? `${desc.substring(0, 70)} ...` : desc;
 
   return (
-    <SwiperSlide className="p-5">
+    <SwiperSlide className="mx-auto p-5">
       <motion.div
         onMouseEnter={strChange}
         onMouseLeave={reStrChange}
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 400 }}
-        className="w-[400px] group hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+        className="w-[450px] group hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
       >
         <div className="relative group py-1 z-40 px-1">
-          <div className="h-[200px] overflow-hidden z-40 rounded-t-2xl">
+          <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
             {img}
           </div>
           <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-8 rounded-xl absolute">

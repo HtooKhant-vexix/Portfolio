@@ -9,7 +9,8 @@ import { FiChevronsRight } from "react-icons/fi";
 import Works from "./Works";
 import "../index.css";
 import { useState } from "react";
-import CardGrid from "./CardGrid";
+// import CardGrid from "./CardGrid";
+import CardList from "./card/CardList";
 
 const list = {
   open: { x: 2, opacity: 1 },
@@ -107,13 +108,13 @@ const Home = () => {
                 bring your vision to life. Your success is my success, and I'm
                 committed to delivering results that exceed your expectations.
               </h1>
-              <div className="flex cursor-none justify-center md:justify-start">
+              <div className="flex justify-center md:justify-start">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400 }}
                   viewport={{ once: true }}
                   //  transform hover:scale-x-150
-                  className="font-poppins cursor-none flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
+                  className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
                 >
                   <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
                   <div
@@ -122,7 +123,7 @@ const Home = () => {
                   ></div>
                   <div
                     style={{ "transform-origin": "left center" }}
-                    className="group-hover:bg-primary cursor-none duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
+                    className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
                   ></div>
                   View Works
                   {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
@@ -153,7 +154,8 @@ const Home = () => {
         </motion.div>
       </div>
       <div className="mt-24">
-        <CardGrid />
+        {/* <CardGrid /> */}
+        <CardList/>
         <Works />
       </div>
     </>
