@@ -8,62 +8,22 @@ import Contact from "../constants/Contact";
 import { FiChevronsRight } from "react-icons/fi";
 import Works from "./Works";
 import "../index.css";
-import Card from "./card/Card";
 import { useState } from "react";
-import CardList from "./card/CardList";
+import CardGrid from "./CardGrid";
 
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
 };
 const Home = () => {
-  const [state, setState] = useState(false);
-
-  // const pointer = {
-  //   cursor : '../assets/pointer.png'
-  // }
-  // const cs = useRef(null);
-  // const cursorVisible = useRef(true);
-  // // const cursorEnlarged = useRef(false);
-  // const endX = useRef(window.innerWidth / 2);
-  // const endY = useRef(window.innerHeight / 2);
-  // const _x = useRef(0);
-  // const _y = useRef(0);
-  // const requestRef = useRef(null);
-  // const toggleCursor = () =>{
-  //   if(cursorVisible.current){
-  //     cs.current.style.opacity = 1;
-  //   }else{
-  //     cs.current.style.opacity = 0;
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   document.addEventListener("mousemove", mouseMoveEvent);
-  //   return () => document.removeEventListener("mousemove", mouseMoveEvent);
-  // },[]);
-
-  // const mouseMoveEvent = (e) => {
-  //   cursorVisible.current =true;
-  //   toggleCursor();
-  //   endX.current = e.pageX;
-  //   endY.current = e.pageY;
-  //   cs.current.style.top = (endY.current-20) + "px";
-  //   cs.current.style.left = (endX.current-20) + "px";
-
-  // };
+  const [state, setState] = useState(false)
 
   return (
     <>
-      {/* <img
-        src={pt}
-        ref={cs}
-        alt=""
-        className="z-50 opacity-0 h w-8 h-8 pointer-events-none absolute overflow-hidden top-[50%] right-[50%] translate-x-[50%] translate-y-[50%] "
-      /> */}
       <div className="py-6 pb-14 sm:pb-12 md:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
         {/* sidebar  */}
         <motion.div
+          viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 1 }}
           initial={{ opacity: 0, x: "-100%" }}
           transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
@@ -109,6 +69,7 @@ const Home = () => {
             <motion.img
               whileInView={{ x: 1, opacity: 1 }}
               initial={{ x: "-100%", opacity: 0 }}
+              viewport={{ once: true }}
               transition={{
                 type: "spring",
                 stiffness: 40,
@@ -119,18 +80,11 @@ const Home = () => {
               className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
               alt=""
             />
-            {/* <motion.img
-            whileInView={{ x:1, opacity: 1 }}
-            initial={{ x:"-100%", opacity: 0 }}
-            transition={{ type: "spring", stiffness: 50, delay: 0.1 }}
-            src={pfp}
-            className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
-            alt=""
-          /> */}
           </div>
           <motion.div
             whileInView={{ x: 1, opacity: 1 }}
             initial={{ x: "100%", opacity: 0 }}
+            viewport={{ once: true }}
             transition={{
               type: "spring",
               stiffness: 40,
@@ -157,6 +111,7 @@ const Home = () => {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400 }}
+                  viewport={{ once: true }}
                   //  transform hover:scale-x-150
                   className="font-poppins cursor-none flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
                 >
@@ -178,6 +133,7 @@ const Home = () => {
         </div>
         <motion.div
           whileInView={{ y: 1, opacity: 1 }}
+          viewport={{ once: true }}
           initial={{ y: "-100%", opacity: 0 }}
           transition={{ type: "spring", stiffness: 40, delay: 0.8 }}
           className="absolute bottom-[-35px] h-16 inset-x-0"
@@ -196,8 +152,8 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className=" mt-24">
-        <CardList />
+      <div className="h-[1400px] mt-24">
+        <CardGrid />
         <Works />
       </div>
     </>

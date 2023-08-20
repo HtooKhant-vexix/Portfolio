@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   scroll-behavior: smooth;
 }
@@ -18,7 +17,7 @@
     #7de7eb 55.12%,
     #5ce1e6 71.54%,
     #33bbcf 100% */
-    0.25turn,
+      0.25turn,
     #5d14ac,
     #bb119c,
     #fe2f69
@@ -44,6 +43,6 @@
   background-image: url("https://assets.website-files.com/62d52b6d074c2e318f479724/62d530867556588cd0f37242_hero-bg.webp");
 }
 
-*{
+* {
   cursor: none;
 }

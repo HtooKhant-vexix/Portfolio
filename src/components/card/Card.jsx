@@ -16,7 +16,7 @@ const Card = ({ img, logo, title, desc }) => {
   const truncatedDesc = str ? `${desc.substring(0, 70)} ...` : desc;
 
   return (
-    <SwiperSlide className="p-9 absolute">
+    <SwiperSlide className="p-5">
       <motion.div
         onMouseEnter={strChange}
         onMouseLeave={reStrChange}

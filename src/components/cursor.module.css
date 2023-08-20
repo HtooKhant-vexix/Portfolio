@@ -4,6 +4,7 @@
     height: 30px;
     position: fixed;
     top: 0;
+    left: 0;
     overflow: hidden;
     transform: translate3d(0,0,0);
     z-index: 2000;
