@@ -152,7 +152,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className="h-[1400px] mt-24">
+      <div className="mt-24">
         <CardGrid />
         <Works />
       </div>
