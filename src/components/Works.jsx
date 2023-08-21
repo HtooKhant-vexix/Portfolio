@@ -8,8 +8,8 @@ const Works = () => {
     //   Works
     // </div>
     <div className="w-full mt-[-700px]">
-      <div className="w-full bg-center h-[800px] mx-auto bg-cover bg-pri">
-      </div>
+      {/* <div className="w-full bg-center h-[800px] mx-auto bg-cover bg-pri">
+      </div> */}
     </div>
   );
 };

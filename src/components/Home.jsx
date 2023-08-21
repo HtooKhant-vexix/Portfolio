@@ -127,7 +127,8 @@ const Home = () => {
                     style={{ "transform-origin": "left center" }}
                     className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
                   ></div>
-                  View Works
+                  {/* View Works */}
+                  Services
                   {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
                 </motion.button>
               </div>
@@ -158,8 +159,8 @@ const Home = () => {
       <div className="mt-24">
         {/* <CardGrid /> */}
         <CardList/>
-        <Works />
-        <SkillText/>
+        {/* <Works /> */}
+        {/* <SkillText/> */}
         <Skill/>
       </div>
     </>
