@@ -87,9 +87,9 @@ const Card = ({ img, logo, title, desc, git, link }) => {
         <motion.div
           onClick={strChange}
           OnClick={reStrChange}
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 400 }}
-          className="w-[450px] group xs:hidden  hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+          // whileHover={{ scale: 1.05 }}
+          // transition={{ type: "spring", stiffness: 400 }}
+          className="w-[450px] group xs:hidden shadow-primary/20 shadow-xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
         >
           <div className="relative py-1 z-40 px-1">
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
