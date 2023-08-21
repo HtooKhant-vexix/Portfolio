@@ -41,7 +41,8 @@
 }
 .bg-img {
   background-image: url("./assets/bg.jpg");
-  background-repeat: repeat-y;
+  background-size: cover;
+  /* background-position: ; */
 }
 .bg-pri {
   background-image: url("./assets/primarybg.png");

@@ -13,7 +13,7 @@ const Card = ({ img, logo, title, desc, git, link }) => {
   const strChange = () => setStr((prevStr) => !prevStr);
   const reStrChange = () => setStr((prevStr) => !prevStr);
 
-  const truncatedDesc = str ? `${desc.substring(0, 70)} ...` : desc;
+  const truncatedDesc = str ? `${desc.substring(0, 70)}` : desc;
 
   return (
     <>
@@ -23,7 +23,7 @@ const Card = ({ img, logo, title, desc, git, link }) => {
           onMouseLeave={reStrChange}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400 }}
-          className="w-[450px] group hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+          className="w-[450px] group hidden xs:inline-block hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
         >
           <div className="relative py-1 z-40 px-1">
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
@@ -81,11 +81,11 @@ const Card = ({ img, logo, title, desc, git, link }) => {
         </motion.div>
         {/* second  */}
         <motion.div
-          onMouseEnter={strChange}
-          onMouseLeave={reStrChange}
+          onClick={strChange}
+          OnClick={reStrChange}
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400 }}
-          className="w-[450px] group hidden hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+          className="w-[450px] group xs:hidden  hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
         >
           <div className="relative py-1 z-40 px-1">
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
@@ -101,10 +101,8 @@ const Card = ({ img, logo, title, desc, git, link }) => {
             </h3>
             <h3 className="text-primary text-lg">
               {truncatedDesc}
-              {desc.length > 70 && (
-                <p className="inline-block text-primary/60 group-hover:hidden">
-                  ... see more
-                </p>
+              {truncatedDesc.length < 80 && (
+                <p className="inline-block text-primary/60 ">... see more</p>
               )}
               <br />
               <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
