@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <div className=" w-full h-[2000px] overflow-hidden bg-img app">
+      <div className=" w-full overflow-hidden bg-img app">
         {/* <div className="fixed w-full"> */}
         <div
           className={`active ${

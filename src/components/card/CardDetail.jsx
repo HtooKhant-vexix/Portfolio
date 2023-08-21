@@ -1,6 +1,5 @@
 import React from "react";
 import nftLogo from "../../assets/logo2.png";
-import img from "../../assets/62d530867556588cd0f37242_hero-bg.webp";
 import nft from "../../assets/nft.png";
 const CardDetail = [
   {

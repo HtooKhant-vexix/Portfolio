@@ -21,7 +21,7 @@ const CardList = () => {
           stiffness: 40,
           ease: "easeOut",
         }}
-        className="m-5 bg-pri"
+        className="m-5"
       >
         <div className="mx-auto w-[85%] flex justify-between mb-8 ">
           <h1 className="text-primary font-bold text-4xl">Projects</h1>

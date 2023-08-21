@@ -11,6 +11,8 @@ import "../index.css";
 import { useState } from "react";
 // import CardGrid from "./CardGrid";
 import CardList from "./card/CardList";
+import SkillText from "./SkillText";
+import Skill from "./Skill";
 
 const list = {
   open: { x: 2, opacity: 1 },
@@ -157,6 +159,8 @@ const Home = () => {
         {/* <CardGrid /> */}
         <CardList/>
         <Works />
+        <SkillText/>
+        <Skill/>
       </div>
     </>
   );
