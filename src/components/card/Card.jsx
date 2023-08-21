@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
-import { FaLink } from "react-icons/fa";
+import { DiCode } from "react-icons/di";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const Card = ({ img, logo, title, desc,dl }) => {
+const Card = ({ img, logo, title, desc, git, link }) => {
   const [str, setStr] = useState(true);
 
   const strChange = () => setStr((prevStr) => !prevStr);
@@ -37,28 +37,44 @@ const Card = ({ img, logo, title, desc,dl }) => {
             {title}
           </h3>
           <h3 className="text-primary text-lg">
-            {truncatedDesc}{" "}
+            {truncatedDesc}
             {desc.length > 70 && (
               <p className="inline-block text-primary/60 group-hover:hidden">
                 ... see more
               </p>
             )}
+            <br />
+            <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
+              <DiCode className="me-1 inline-block text-2xl mx-auto my-auto" />
+              Front-end
+            </p>
           </h3>
         </div>
         <div className="absolute w-full inset-x-0 group-hover:translate-y-0 duration-300 -translate-y-24 bg-white pb-5 rounded-b-3xl pt-32 bottom-[-80px] z-0">
           <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
           <div className="mt-3 justify-between w-full px-8 mx-1 flex">
             <div className="text-primary flex items-center">
-              <AiFillGithub className="hover:text-secondary my-auto text-3xl" />
-              <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" />
+              <motion.a
+                whileTap={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                href={git}
+                className="hover:text-secondary my-auto  flex"
+              >
+                <AiFillGithub className="text-3xl" />
+                <p className="text-xl font-semibold ms-2">Git Repo</p>
+              </motion.a>
+              {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
             </div>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400 }}
-              className="text-lg ms-auto p-2 cursor-none px-5 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
-            >
-              Live Demo
-            </motion.button>
+            <a href={link}>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                className="text-lg ms-auto p-2 cursor-none px-5 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
+              >
+                Live Demo
+              </motion.button>
+            </a>
           </div>
         </div>
       </motion.div>

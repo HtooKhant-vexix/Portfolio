@@ -6,7 +6,7 @@ const CardDetail = [
   {
     id: 1,
     title: "NFT Marketplace",
-    desc: "Buy and sell digital art NFT collection. Everything you need to build, host, scale amazing dapps free by creating account",
+    desc: "Buy and sell digital art NFT collection. Everything you need to build, host, scale amazing dapps free by creating account.",
     img: (
       <img
         src={nft}
@@ -16,6 +16,8 @@ const CardDetail = [
     ),
     logo: <img src={nftLogo} alt="err" className="p-2 ps-3 " />,
     dl: 0,
+    git: "https://github.com/HtooKhant-vexix/NFT-Market",
+    link: "https://nft-market-cyan.vercel.app",
   },
   {
     id: 1,

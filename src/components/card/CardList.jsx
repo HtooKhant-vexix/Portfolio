@@ -7,6 +7,7 @@ import Card from "./Card.jsx";
 import CardDetail from "./CardDetail.jsx";
 import './card.css'
 import { motion } from "framer-motion";
+import '../../index.css'
 
 const CardList = () => {
   return (
@@ -20,7 +21,7 @@ const CardList = () => {
           stiffness: 40,
           ease: "easeOut",
         }}
-        className="m-5"
+        className="m-5 bg-pri"
       >
         <div className="mx-auto w-[85%] flex justify-between mb-8 ">
           <h1 className="text-primary font-bold text-4xl">Projects</h1>
@@ -29,7 +30,7 @@ const CardList = () => {
           </h1>
         </div>
         <Swiper
-          className="mySwiper justify-center flex mx-auto min-h-[550px] "
+          className="mySwiperf justify-center flex mx-auto min-h-[590px] "
           slidesPerView={1}
           spaceBetween={10}
           pagination={{
@@ -55,7 +56,7 @@ const CardList = () => {
               spaceBetween: 20,
             },
           }}
-          modules={[Pagination]}
+          // modules={[Pagination]}
           // className="mySwiper"
         >
           {CardDetail.slice(0, 4).map(({ id, ...cardProps }) => (
@@ -69,6 +70,7 @@ const CardList = () => {
                 ease: "easeOut",
               }}
               key={id}
+              className=""
             >
               <Card {...cardProps} />
             </SwiperSlide>
