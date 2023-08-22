@@ -36,7 +36,7 @@ const CardDetail = [
       />
     ),
     logo: <img src={nftmak} alt="err" className="p-2 " />,
-    dl: 2,
+    dl: 0.2,
     git: "https://github.com/HtooKhant-vexix/NFT-Marketplace-Dashboard",
     link: "https://nft-marketplace-dashboard-red.vercel.app",
   },
@@ -52,7 +52,7 @@ const CardDetail = [
       />
     ),
     logo: <img src={dashlylogo} alt="err" className="p-2 " />,
-    dl: 4,
+    dl: 0.4,
     git: "https://github.com/HtooKhant-vexix/Dashly-Dashboad",
     link: "https://dashly-dashboad.vercel.app",
   },
