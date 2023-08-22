@@ -24,7 +24,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
       <SwiperSlide className="mx-auto p-5">
         <motion.div
           whileInView={{ y: 1, opacity: 1 }}
-          initial={{ y: "230px", opacity: 0 }}
+          initial={{ y: "200px", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",

@@ -15,7 +15,7 @@ const CardList = () => {
     <>
       <motion.div
         whileInView={{ y: 1, opacity: 1 }}
-        initial={{ y: "230px", opacity: 0 }}
+        initial={{ y: "190px", opacity: 0 }}
         viewport={{ once: true }}
         transition={{
           type: "spring",
