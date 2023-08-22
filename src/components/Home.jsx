@@ -156,7 +156,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className="mt-24">
+      <div className="mt-32 sm:mt-24">
         {/* <CardGrid /> */}
         <CardList/>
         {/* <Works /> */}

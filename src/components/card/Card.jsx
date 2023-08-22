@@ -33,7 +33,7 @@ const Card = ({ img, logo, title, desc, git, link, api }) => {
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
               {img}
             </div>
-            <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-8 rounded-xl absolute">
+            <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/20 z-40 bottom-[-27px] right-8 rounded-xl absolute">
               {logo}
             </div>
           </div>
@@ -95,7 +95,7 @@ const Card = ({ img, logo, title, desc, git, link, api }) => {
           OnClick={reStrChange}
           // whileHover={{ scale: 1.05 }}
           // transition={{ type: "spring", stiffness: 400 }}
-          className="w-[450px] group xs:hidden shadow-primary/20 shadow-xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+          className="w-[450px] group xs:hidden shadow-primary/20 shadow-xl duration-100 relative  rounded-3xl p-3 z-40 bg-white"
         >
           <div className="relative py-1 z-40 px-1">
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
