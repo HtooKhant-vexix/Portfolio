@@ -35,8 +35,10 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
           className=""
         >
           <motion.div
-            onMouseEnter={strChange}
-            onMouseLeave={reStrChange}
+            onClick={strChange}
+            OnClick={reStrChange}
+            // onMouseEnter={strChange}
+            // onMouseLeave={reStrChange}
             whileHover={{ scale: 1.05 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 400 }}
@@ -55,7 +57,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                 {title}
               </h3>
               <h3 className="text-primary text-lg">
-                {truncatedDesc}
+                {/* {truncatedDesc}
                 {desc.length > 70 && (
                   <p className="inline-block text-primary/60 group-hover:hidden">
                     ... see more
@@ -71,10 +73,27 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                     <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
                     Api
                   </p>
+                )} */}
+                {truncatedDesc}
+                {truncatedDesc.length < 80 && (
+                  <p className="inline-block text-primary/60 ">... see more</p>
                 )}
+                <br />
+                {truncatedDesc.length > 80 && (
+                  <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
+                    <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
+                    Front-end
+                  </p>
+                )}
+                {(api & (truncatedDesc.length > 80))? (
+                  <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
+                    <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
+                    Api
+                  </p>
+                ) : null}
               </h3>
             </div>
-            <div className="absolute w-full inset-x-0 group-hover:translate-y-0 duration-300 -translate-y-24 bg-white pb-5 rounded-b-3xl pt-32 bottom-[-80px] z-0">
+            <div className={str ? normalClass : updateClass}>
               <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
               <div className="mt-3 justify-between w-full px-8 mx-1 flex">
                 <div className="text-primary flex items-center">
@@ -106,6 +125,8 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
 
         {/* second  */}
         <motion.div
+          onClick={strChange}
+          OnClick={reStrChange}
           whileInView={{ y: 1, opacity: 1 }}
           initial={{ y: "230px", opacity: 0 }}
           viewport={{ once: true }}
@@ -115,79 +136,67 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
             ease: "easeOut",
             delay: dl,
           }}
-          className=""
+          // whileHover={{ scale: 1.05 }}
+          // transition={{ type: "spring", stiffness: 400 }}
+          className="w-[450px] duration-150 group xs:hidden shadow-primary/20 shadow-xl relative rounded-3xl p-3 z-40 bg-white"
         >
-          <motion.div
-            onClick={strChange}
-            OnClick={reStrChange}
-            // whileHover={{ scale: 1.05 }}
-            // transition={{ type: "spring", stiffness: 400 }}
-            className="w-[450px] group xs:hidden shadow-primary/20 shadow-xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
-          >
-            <div className="relative py-1 z-40 px-1">
-              <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
-                {img}
-              </div>
-              <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
-                {logo}
-              </div>
+          <div className="relative py-1 z-40 px-1">
+            <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
+              {img}
             </div>
-            <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-5">
-              <h3 className="text-xl text-primary w-[80%] pb-2 font-semibold">
-                {title}
-              </h3>
-              <h3 className="text-primary text-md">
-                {truncatedDesc}
-                {truncatedDesc.length < 80 && (
-                  <p className="inline-block text-primary/60 ">... see more</p>
-                )}
-                <br />
-                {truncatedDesc.length > 80 && (
-                  // <p className="inline-block text-primary/60 ">... see more</p>
-                  <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
-                    {/* <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary"> */}
-                    <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
-                    Front-end
+            <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
+              {logo}
+            </div>
+          </div>
+          <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-5">
+            <h3 className="text-xl text-primary w-[80%] pb-2 font-semibold">
+              {title}
+            </h3>
+            <h3 className="text-primary text-md">
+              {truncatedDesc}
+              {truncatedDesc.length < 80 && (
+                <p className="inline-block text-primary/60 ">... see more</p>
+              )}
+              <br />
+              {truncatedDesc.length > 80 && (
+                // <p className="inline-block text-primary/60 ">... see more</p>
+                <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
+                  {/* <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary"> */}
+                  <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
+                  Front-end
+                </p>
+              )}
+            </h3>
+          </div>
+          <div className={str ? normalClass : updateClass}>
+            <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
+            <div className="mt-3 justify-between w-full px-8 mx-1 flex">
+              <div className="text-primary flex items-center">
+                <motion.a
+                  whileTap={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  href={git}
+                  className="hover:text-secondary my-auto  flex"
+                >
+                  <AiFillGithub className="text-2xl" />
+                  <p className="text-lg font-semibold ms-2 mt-[-1px]">
+                    Git Repo
                   </p>
-                )}
-                {api && (
-                  <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
-                    <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
-                    Api
-                  </p>
-                )}
-              </h3>
-            </div>
-            <div className={str ? normalClass : updateClass}>
-              <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
-              <div className="mt-3 justify-between w-full px-8 mx-1 flex">
-                <div className="text-primary flex items-center">
-                  <motion.a
-                    whileTap={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                    href={git}
-                    className="hover:text-secondary my-auto  flex"
-                  >
-                    <AiFillGithub className="text-2xl" />
-                    <p className="text-lg font-semibold ms-2 mt-[-1px]">
-                      Git Repo
-                    </p>
-                  </motion.a>
-                  {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
-                </div>
-                <a href={link}>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 1.2 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                    className="text-md ms-auto p-2 cursor-none px-4 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
-                  >
-                    Live Demo
-                  </motion.button>
-                </a>
+                </motion.a>
+                {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
               </div>
+              <a href={link}>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  className="text-md ms-auto p-2 cursor-none px-4 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
+                >
+                  Live Demo
+                </motion.button>
+              </a>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </SwiperSlide>
     </>

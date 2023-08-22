@@ -11,7 +11,7 @@ import "../index.css";
 import { useState } from "react";
 // import CardGrid from "./CardGrid";
 import CardList from "./card/CardList";
-import SkillText from "./SkillText";
+import SkillText from "./Skill/SkillText";
 import Skill from "./Skill/Skill";
 
 const list = {
@@ -156,7 +156,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className="mt-[115px] sm:mt-24">
+      <div className="mt-[115px] sm:mt-28">
         {/* <CardGrid /> */}
         <CardList/>
         {/* <Works /> */}
