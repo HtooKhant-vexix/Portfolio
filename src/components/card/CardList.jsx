@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Card from "./Card.jsx";
 import CardDetail from "./CardDetail.jsx";
-import './card.css'
+import "./card.css";
 import { motion } from "framer-motion";
-import '../../index.css'
+import "../../index.css";
 
 const CardList = () => {
   return (
@@ -21,13 +21,19 @@ const CardList = () => {
           stiffness: 40,
           ease: "easeOut",
         }}
-        className="m-5"
+        className="m-5 mt-7"
       >
-        <div className="mx-auto w-[85%] flex justify-between mb-8 ">
-          <h1 className="text-primary font-bold text-4xl">Projects</h1>
-          <h1 className="text-primary text-2xl py-2 px-4 border border-primary rounded-md ">
-            View all works
+        <div className="mx-auto w-[85%] items-center flex justify-between mb-2 md:mb-8 ">
+          <h1 className="text-primary font-bold text-2xl flex sm:text-3xl md:text-4xl">
+            Projects
           </h1>
+          <motion.h1
+            whileTap={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400 }}
+            className="text-primary text-lg md:text-2xl py-2 px-4 hover:bg-primary hover:text-white duration-100 border border-primary rounded-lg "
+          >
+            View all works
+          </motion.h1>
         </div>
         <Swiper
           className="mySwiperf justify-center flex mx-auto min-h-[590px] "

@@ -95,15 +95,15 @@ const Card = ({ img, logo, title, desc, git, link }) => {
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
               {img}
             </div>
-            <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-8 rounded-xl absolute">
+            <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
               {logo}
             </div>
           </div>
-          <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-7">
-            <h3 className="text-2xl text-primary w-[80%] pb-2 font-semibold">
+          <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-5">
+            <h3 className="text-xl text-primary w-[80%] pb-2 font-semibold">
               {title}
             </h3>
-            <h3 className="text-primary text-lg">
+            <h3 className="text-primary text-md">
               {truncatedDesc}
               {truncatedDesc.length < 80 && (
                 <p className="inline-block text-primary/60 ">... see more</p>
@@ -111,9 +111,9 @@ const Card = ({ img, logo, title, desc, git, link }) => {
               <br />
               {truncatedDesc.length > 80 && (
                 // <p className="inline-block text-primary/60 ">... see more</p>
-                <p className=" bg-opacity-30 pe-4 py-1 mt-2 rounded-full border border-secondary inline-block px-2 text-sm text-secondary">
+                <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
                   {/* <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary"> */}
-                  <DiCode className="me-1 inline-block text-2xl mx-auto my-auto" />
+                  <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                   Front-end
                 </p>
               )}
@@ -129,8 +129,8 @@ const Card = ({ img, logo, title, desc, git, link }) => {
                   href={git}
                   className="hover:text-secondary my-auto  flex"
                 >
-                  <AiFillGithub className="text-3xl" />
-                  <p className="text-xl font-semibold ms-2">Git Repo</p>
+                  <AiFillGithub className="text-2xl" />
+                  <p className="text-lg font-semibold ms-2 mt-[-1px]">Git Repo</p>
                 </motion.a>
                 {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
               </div>
@@ -139,7 +139,7 @@ const Card = ({ img, logo, title, desc, git, link }) => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 400 }}
-                  className="text-lg ms-auto p-2 cursor-none px-5 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
+                  className="text-md ms-auto p-2 cursor-none px-4 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
                 >
                   Live Demo
                 </motion.button>
