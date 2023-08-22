@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineApi } from "react-icons/ai";
 import { DiCode } from "react-icons/di";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const Card = ({ img, logo, title, desc, git, link }) => {
+const Card = ({ img, logo, title, desc, git, link, api }) => {
   const [str, setStr] = useState(true);
 
   const strChange = () => setStr((prevStr) => !prevStr);
@@ -53,6 +53,12 @@ const Card = ({ img, logo, title, desc, git, link }) => {
                 <DiCode className="me-1 inline-block text-2xl mx-auto my-auto" />
                 Front-end
               </p>
+              {api && (
+                <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
+                  <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
+                  Api
+                </p>
+              )}
             </h3>
           </div>
           <div className="absolute w-full inset-x-0 group-hover:translate-y-0 duration-300 -translate-y-24 bg-white pb-5 rounded-b-3xl pt-32 bottom-[-80px] z-0">
@@ -130,7 +136,9 @@ const Card = ({ img, logo, title, desc, git, link }) => {
                   className="hover:text-secondary my-auto  flex"
                 >
                   <AiFillGithub className="text-2xl" />
-                  <p className="text-lg font-semibold ms-2 mt-[-1px]">Git Repo</p>
+                  <p className="text-lg font-semibold ms-2 mt-[-1px]">
+                    Git Repo
+                  </p>
                 </motion.a>
                 {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
               </div>
