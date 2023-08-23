@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
 import { FiChevronsRight } from "react-icons/fi";
-import Works from "./Works";
+import Works from "./Work/Works";
 import "../index.css";
 import { useState } from "react";
 // import CardGrid from "./CardGrid";
@@ -162,12 +162,8 @@ const Home = () => {
         </motion.div>
       </div>
       <div className="mt-[115px] sm:mt-28">
-        {/* <CardGrid /> */}
         <CardList />
-        {/* <Works /> */}
-        {/* <SkillText/> */}
         <Skill />
-        {/* <Text/> */}
         <Mail />
       </div>
     </>

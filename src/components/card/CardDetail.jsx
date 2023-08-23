@@ -43,7 +43,7 @@ const CardDetail = [
   {
     id: 3,
     title: "Dashly Dashboard",
-    desc: "Optimize your e-commerce business with our intuitive dashboard. Effortlessly manage products, orders, and customer insights for data-driven decisions.",
+    desc: "Optimize your e-commerce business with our intuitive dashboard. Effortlessly manage products, order and customer insights for data-driven dessions.",
     img: (
       <img
         src={dashly}
@@ -58,7 +58,39 @@ const CardDetail = [
   },
   {
     id: 4,
-    title: "Google Contact Clone",
+    title: "Contact Clone",
+    desc: "Google Contacts is your online address book, integrated with Gmail, Calendar, Drive, and other Google products.",
+    img: (
+      <img
+        src={contact}
+        alt="err"
+        className="object-cover  duration-100  group-hover:z-50 w-full object-center"
+      />
+    ),
+    logo: <img src={gcLogo} alt="err" className="p-2 " />,
+    git: "https://github.com/HtooKhant-vexix/Google-Contact-clone",
+    link: "https://google-contact-clone.vercel.app",
+    api:true
+  },
+  {
+    id: 4,
+    title: "Contact Clone",
+    desc: "Google Contacts is your online address book, integrated with Gmail, Calendar, Drive, and other Google products.",
+    img: (
+      <img
+        src={contact}
+        alt="err"
+        className="object-cover  duration-100  group-hover:z-50 w-full object-center"
+      />
+    ),
+    logo: <img src={gcLogo} alt="err" className="p-2 " />,
+    git: "https://github.com/HtooKhant-vexix/Google-Contact-clone",
+    link: "https://google-contact-clone.vercel.app",
+    api:true
+  },
+  {
+    id: 4,
+    title: "Contact Contact",
     desc: "Google Contacts is your online address book, integrated with Gmail, Calendar, Drive, and other Google products.",
     img: (
       <img

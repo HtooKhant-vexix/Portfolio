@@ -14,6 +14,7 @@ import {
 } from "./components/index";
 import { Card } from "antd";
 import ScrollToTop from "./components/ScrollToTop";
+import Works from "./components/Work/Works";
 
 function App() {
   const [show, setShow] = useState(true);
@@ -65,7 +66,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="About" element={<About />} />
               <Route path="/Service" element={<Service />} />
-              <Route path="/Work" element={<Work />} />
+              <Route path="/Work" element={<Works />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/Card" element={<Card />} />
             </Routes>

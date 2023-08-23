@@ -18,7 +18,7 @@ const Mail = () => {
               <input
                 type="text"
                 className="rounded-md placeholder:text-primary/40 bg-primary/20 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
-                placeholder="first Name"
+                placeholder="First Name"
               />
               <input
                 type="text"
