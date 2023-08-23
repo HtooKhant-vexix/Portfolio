@@ -53,7 +53,7 @@ const Service = () => {
         <div className="">
           <Landing />
         </div>
-        <div className="sm:mt-28 mt-20 mb-8 sm:mb-10">
+        <div className="sm:mt-24 mt-14 mb-8 sm:mb-10">
           <div className=" flex justify-center mx-auto mb-14 sm:mb-20 text-5xl sm:text-7xl text-primary font-bold ">
             <motion.div
               whileInView={{ y: 0, opacity: 1 }}

@@ -10,7 +10,7 @@ const Mail = () => {
           <img src={mail} alt="" className="p-16" />
         </div>
         <div className=" flex flex-col items-center justify-center">
-          <h1 className="text-5xl font-bold mx-auto text-primary ">
+          <h1 className="text-3xl md:text-5xl font-bold mx-auto text-primary ">
             Get in Touch
           </h1>
           <form className="w-[80%] lg:w-[80%] mt-10">

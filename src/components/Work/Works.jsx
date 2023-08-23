@@ -29,7 +29,7 @@ const Works = () => {
           </div>
         </motion.div>
       </div>
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 mb-20 p-10">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-20 mb-20 p-10">
         {CardDetail.map(({ id, ...cardProps }) => (
           <div
             // whileInView={{ y: 1, opacity: 1 }}

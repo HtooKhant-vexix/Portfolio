@@ -42,7 +42,7 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
             whileHover={{ scale: 1.05 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 400 }}
-            className="w-[100%] group hidden xs:inline-block hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
+            className="w-[100%] group inline-block hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
           >
             <div className="relative py-1 z-40 px-1">
               <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
@@ -67,17 +67,12 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
                 <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
                   <DiCode className="me-1 inline-block text-2xl mx-auto my-auto" />
                   Front-end
-                </p>
-                {api && (
-                  <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
-                    <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
-                    Api
-                  </p>
-                )} */}
+                </p> */}
+
                 {/* {desc} */}
                 {truncatedDesc}
                 {truncatedDesc.length < 80 && (
-                <p className="inline-block text-primary/60 ">... see more</p>
+                  <p className="inline-block text-primary/60 ">... see more</p>
                 )}
                 <br />
                 {/* {truncatedDesc.length > 80 && ( */}
@@ -86,12 +81,12 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
                   Front-end
                 </p>
                 {/* // )} */}
-                {api & (truncatedDesc.length > 80) ? (
+                {api && (
                   <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
                     <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
                     Api
                   </p>
-                ) : null}
+                )}
               </h3>
             </div>
             <div className={updateClass}>
