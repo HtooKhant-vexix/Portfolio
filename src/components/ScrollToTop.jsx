@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
-const ScrollToTop = () => {
-  // Extracts pathname property(key) from an object
+function ScrollToTop() {
   const { pathname } = useLocation();
+  const prevPathnameRef = useRef("");
 
-  // Automatically scrolls to top whenever pathname changes
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (pathname !== prevPathnameRef.current) {
+      window.location.reload();
+    }
   }, [pathname]);
-};
+
+  return null;
+}
 
 export default ScrollToTop;

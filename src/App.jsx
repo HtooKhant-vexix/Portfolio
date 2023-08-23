@@ -13,6 +13,7 @@ import {
   Footer,
 } from "./components/index";
 import { Card } from "antd";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [show, setShow] = useState(true);

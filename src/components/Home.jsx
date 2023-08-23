@@ -26,7 +26,6 @@ const Home = () => {
 
   return (
     <>
-    <ScrollToTop/>
       <div className="py-6 pb-14 sm:pb-12 md:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
         {/* sidebar  */}
         <motion.div
@@ -114,28 +113,30 @@ const Home = () => {
                 bring your vision to life. Your success is my success, and I'm
                 committed to delivering results that exceed your expectations.
               </h1>
-              <div className="flex justify-center md:justify-start">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                  viewport={{ once: true }}
-                  //  transform hover:scale-x-150
-                  className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
-                >
-                  <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
-                  <div
-                    style={{ "transform-origin": "left center" }}
-                    className="group-hover:bg-primary duration-300 transition-transform transform group-hover:translate-x-8 absolute w-4 h-full z-10 inset-y-0 right-0 rounded-r-xl "
-                  ></div>
-                  <div
-                    style={{ "transform-origin": "left center" }}
-                    className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
-                  ></div>
-                  {/* View Works */}
-                  Services
-                  {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
-                </motion.button>
-              </div>
+              <NavLink to={"/service"}>
+                <div className="flex justify-center md:justify-start">
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    viewport={{ once: true }}
+                    //  transform hover:scale-x-150
+                    className="font-poppins flex sm:p-3  group sm:px-6 mt-5 relative  hover:shadow-2xl z-50 shadow-secondary/50 shadow-2xl hover:shadow-primary/50 hover:bg-primary bg-secondary rounded-xl font-semibold px-5 p-3 text-[0.8rem] sm:text-[1rem] text-white"
+                  >
+                    <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
+                    <div
+                      style={{ "transform-origin": "left center" }}
+                      className="group-hover:bg-primary duration-300 transition-transform transform group-hover:translate-x-8 absolute w-4 h-full z-10 inset-y-0 right-0 rounded-r-xl "
+                    ></div>
+                    <div
+                      style={{ "transform-origin": "left center" }}
+                      className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
+                    ></div>
+                    {/* View Works */}
+                    Services
+                    {/* <BsFillArrowRightCircleFill className=" ms-3 text-primary  inset-y-0 right-[-48px] my-auto absolute text-2xl animate-fade-right group-hover:animate-infinite hidden group-hover:flex animate-duration-700" /> */}
+                  </motion.button>
+                </div>
+              </NavLink>
             </div>
           </motion.div>
         </div>
@@ -167,7 +168,7 @@ const Home = () => {
         {/* <SkillText/> */}
         <Skill />
         {/* <Text/> */}
-        <Mail/>
+        <Mail />
       </div>
     </>
   );
