@@ -14,6 +14,7 @@ const Nav = () => {
       <ul className="list-none sm:flex hidden text-primary justify-end items-center flex-1">
         {NavLinks.map((e) => (
           <NavLink to={`/${e.name}`} key={e.id}>
+          {/* <a href={`/${e.name}`} key={e.id}> */}
             <motion.li
               whileHover={{ scale: 1.2 }}
               key={e.id}
@@ -22,6 +23,7 @@ const Nav = () => {
               <div className="flex me-2 text-2xl">{e.icon}</div>
               {e.label}
             </motion.li>
+          {/* </a> */}
           </NavLink>
         ))}
       </ul>

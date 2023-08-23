@@ -44,9 +44,12 @@
   background-size: cover;
   /* background-position: ; */
 }
-.bg-pri {
-  background-image: url("./assets/primarybg.png");
+.landBg {
+  background-image: url("./assets/geo.jpg");
+  background-size: cover;
+
 }
+
 
 * {
   cursor: url(./assets/cursor.svg), auto !important;

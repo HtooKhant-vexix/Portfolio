@@ -1,6 +1,7 @@
 import React from "react";
 import sData from "./skillData";
 import { motion } from "framer-motion";
+import Text from "./Text";
 
 const Skill = () => {
   return (
@@ -24,8 +25,9 @@ const Skill = () => {
             <motion.div
               key={id}
               className="text-center hover:shadow-2xl duration-150 hover:text-secondary hover:shadow-secondary/20 bg-white w-[100px] sm:w-[150px] h-[100px] sm:h-[150px] flex flex-col justify-center rounded-xl text-[50px] sm:text-[90px] mx-auto"
-              whileInView={{ y: 0, opacity: 1 }}
-              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ scale: 1 }}
+              initial={{ scale: 0 }}
+              viewport={{once:true}}
               transition={{
                 type: "spring",
                 stiffness: 100,
@@ -40,6 +42,7 @@ const Skill = () => {
           ))}
         </div>
       </div>
+      <Text />
     </div>
   );
 };

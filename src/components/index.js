@@ -1,6 +1,6 @@
 import Home from "./Home.jsx";
 import About from "./About.jsx";
-import Service from "./Service.jsx";
+import Service from "./servicePage/Service.jsx";
 import Work from "./Work.jsx";
 import Contact from "./Contact.jsx";
 import Nav from "./Nav.jsx";
