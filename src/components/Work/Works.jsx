@@ -29,6 +29,22 @@ const Works = () => {
           </div>
         </motion.div>
       </div>
+      <div className=" mt-24 flex justify-center mx-auto mb-14 sm:mb-14 text-5xl sm:text-7xl text-primary font-bold ">
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 40,
+            delay: 0.5,
+            ease: "easeOut",
+          }}
+          className="text-gradient"
+        >
+          PRACTICAL PROJECT
+        </motion.div>
+      </div>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-20 mb-20 p-10">
         {CardDetail.map(({ id, ...cardProps }) => (
           <div

@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
+  {/* <ScrollToTop/> */}
     <App />
   </BrowserRouter>
 );

@@ -6,7 +6,7 @@ const SkillText = () => {
     <motion.div
       whileInView={{ scale: 1, opacity: 1 }}
       initial={{ scale: 0 , opacity: 0 }}
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
       transition={{
         type: "spring",
         stiffness: 40,

@@ -25,7 +25,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
         <motion.div
           whileInView={{ y: 1, opacity: 1 }}
           initial={{ y: "200px", opacity: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 40,
@@ -40,7 +40,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
             // onMouseEnter={strChange}
             // onMouseLeave={reStrChange}
             whileHover={{ scale: 1.05 }}
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 400 }}
             className="w-[450px] group hidden xs:inline-block hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
           >
@@ -129,7 +129,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
           OnClick={reStrChange}
           whileInView={{ y: 1, opacity: 1 }}
           initial={{ y: "230px", opacity: 0 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 40,

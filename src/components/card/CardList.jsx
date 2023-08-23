@@ -9,6 +9,7 @@ import "./card.css";
 import { motion } from "framer-motion";
 import "../../index.css";
 import { FiChevronsRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const CardList = () => {
   return (
@@ -16,7 +17,7 @@ const CardList = () => {
       <motion.div
         whileInView={{ y: 1, opacity: 1 }}
         initial={{ y: "190px", opacity: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         transition={{
           type: "spring",
           stiffness: 40,
@@ -41,7 +42,7 @@ const CardList = () => {
             transition={{ type: "spring", stiffness: 400 }}
             className="text-primary text-lg md:text-2xl py-2 px-4 hover:bg-primary hover:text-white duration-100 border border-primary rounded-lg "
           >
-            View all works
+            <Link to={"/work"}> View all works</Link>
           </motion.h1>
         </div>
         <Swiper
@@ -72,7 +73,7 @@ const CardList = () => {
             <SwiperSlide
               whileInView={{ y: 1, opacity: 1 }}
               initial={{ y: "200px", opacity: 0 }}
-              viewport={{ once: true }}
+              // viewport={{ once: true }}
               transition={{
                 type: "spring",
                 stiffness: 40,

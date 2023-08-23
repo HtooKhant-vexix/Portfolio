@@ -15,6 +15,17 @@ import {
 import { Card } from "antd";
 import ScrollToTop from "./components/ScrollToTop";
 import Works from "./components/Work/Works";
+import { useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
+
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    //  window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+  return children;
+};
 
 function App() {
   const [show, setShow] = useState(true);
@@ -59,25 +70,18 @@ function App() {
             <Nav />
           </div>
         </div>
-
-        <div className="">
-          <div className="">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="About" element={<About />} />
-              <Route path="/Service" element={<Service />} />
-              <Route path="/Work" element={<Works />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/Card" element={<Card />} />
-            </Routes>
-          </div>
-        </div>
-
-        <div className="">
-          <div className="">
-            <Footer />
-          </div>
-        </div>
+        <Wrapper>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="About" element={<About />} />
+            <Route path="Service" element={<Service />} />
+            <Route path="Work" element={<Works />} />
+            <Route path="Contact" element={<Contact />} />
+            <Route path="Card" element={<Card />} />
+          </Routes>
+          <Footer />
+        </Wrapper>
       </div>
     </>
   );

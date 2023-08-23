@@ -9,7 +9,7 @@ const Skill = () => {
       <motion.div
         whileInView={{ scale: 1, opacity: 1 }}
         initial={{ scale: 0, opacity: 0 }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         transition={{
           type: "spring",
           stiffness: 60,
@@ -27,7 +27,7 @@ const Skill = () => {
               className="text-center hover:shadow-2xl duration-150 hover:text-secondary hover:shadow-secondary/20 bg-white w-[100px] sm:w-[150px] h-[100px] sm:h-[150px] flex flex-col justify-center rounded-xl text-[50px] sm:text-[90px] mx-auto"
               whileInView={{ scale: 1 }}
               initial={{ scale: 0 }}
-              viewport={{once:true}}
+              // viewport={{once:true}}
               transition={{
                 type: "spring",
                 stiffness: 100,
