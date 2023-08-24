@@ -42,7 +42,7 @@ const Works = () => {
           }}
           className="text-gradient"
         >
-          PRACTICAL PROJECT
+          Recent Works
         </motion.div>
       </div>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-20 mb-20 p-10">

@@ -58,7 +58,7 @@ const Service = () => {
             <motion.div
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 100, opacity: 0 }}
-              viewport={{ once: true }}
+              // viewport={{ once: true }}
               transition={{
                 type: "spring",
                 stiffness: 40,
@@ -75,7 +75,7 @@ const Service = () => {
               <motion.div
                 whileInView={{ y: 0, opacity: 1 }}
                 initial={{ y: 180, opacity: 0 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 transition={{
                   type: "spring",
                   stiffness: 40,

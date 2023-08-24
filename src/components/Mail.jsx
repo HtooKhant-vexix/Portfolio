@@ -1,6 +1,6 @@
 import React from "react";
 import mail from "../assets/mail.png";
-import mailBg from "../assets/mailBg.jpg";
+// import mailBg from "../assets/mailBg.jpg";
 import '../index.css'
 const Mail = () => {
   return (

@@ -85,7 +85,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                     Front-end
                   </p>
                 )}
-                {(api & (truncatedDesc.length > 80))? (
+                {api & (truncatedDesc.length > 80) ? (
                   <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
                     <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
                     Api
@@ -144,9 +144,11 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
             <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
               {img}
             </div>
-            <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
-              {logo}
-            </div>
+            {logo && (
+              <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
+                {logo}
+              </div>
+            )}
           </div>
           <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-5">
             <h3 className="text-xl text-primary w-[80%] pb-2 font-semibold">
