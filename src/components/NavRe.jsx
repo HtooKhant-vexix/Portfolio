@@ -5,18 +5,18 @@ import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import { useState, useEffect } from "react";
 
-const Nav = () => {
-   const [show, setShow] = useState(true);
+const NavRe = () => {
+   const [show, setShow] = useState(false);
    const [lastScrollY, setLastScrollY] = useState(0);
 
    const controlNavbar = () => {
      if (typeof window !== "undefined") {
-       if (window.scrollY > lastScrollY) {
+       if (window.scrollY > lastScrollY ) {
          // if scroll down hide the navbar
-         setShow(false);
+         setShow(true);
        } else {
          // if scroll up show the navbar
-         setShow(true);
+         setShow(false);
        }
 
        // remember current page location to use in the next move
@@ -67,4 +67,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavRe;

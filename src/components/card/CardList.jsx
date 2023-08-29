@@ -23,7 +23,7 @@ const CardList = () => {
           stiffness: 40,
           ease: "easeOut",
         }}
-        className="m-5"
+        className="m-5 "
       >
         <div className="mx-auto w-[85%] items-center flex justify-between mb-2 md:mb-8 ">
           <h1 className="text-primary font-bold text-2xl flex sm:text-3xl md:text-4xl">
@@ -46,7 +46,7 @@ const CardList = () => {
           </motion.h1>
         </div>
         <Swiper
-          className="mySwiperf justify-center flex mx-auto min-h-[680px] "
+          className="mySwiperf justify-center z-0 flex mx-auto min-h-[680px] "
           slidesPerView={1}
           spaceBetween={10}
           pagination={{

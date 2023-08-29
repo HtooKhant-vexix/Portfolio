@@ -16,6 +16,7 @@ import Skill from "./Skill/Skill";
 import Text from "./Skill/Text";
 import Mail from "./Mail";
 import ScrollToTop from "./ScrollToTop";
+import Nav from "./Nav";
 
 const list = {
   open: { x: 2, opacity: 1 },
@@ -26,6 +27,7 @@ const Home = () => {
 
   return (
     <>
+    <Nav/>
       <div className="py-6 pb-14 sm:pb-12 md:pb-6 px-8 sm:px-0 relative flex z-10 md:items-center m-2 ss:m-3 sm:m-6 md:m-12 rounded-3xl bg-white bg-opacity-40 border-white border-2">
         {/* sidebar  */}
         <motion.div

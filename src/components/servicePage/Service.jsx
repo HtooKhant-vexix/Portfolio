@@ -8,6 +8,7 @@ import proto from "../../assets/prototyping.png";
 import "../../index.css";
 import { easeOut, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import NavRe from "../NavRe";
 
 const Service = () => {
   const serviceDate = [
@@ -49,11 +50,12 @@ const Service = () => {
 
   return (
     <>
+      <NavRe/>
       <div>
         <div className="">
           <Landing />
         </div>
-        <div className="sm:mt-24 mt-14 mb-8 sm:mb-10">
+        <div className="sm:mt-20 mt-14 mb-8 sm:mb-10">
           <div className=" flex justify-center mx-auto mb-14 sm:mb-20 text-5xl sm:text-7xl text-primary font-bold ">
             <motion.div
               whileInView={{ y: 0, opacity: 1 }}

@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import Card from "../card/Card.jsx";
 import CardDetail from "../card/CardDetail.jsx";
 import Work from "./Work.jsx";
+import NavRe from "../NavRe.jsx";
 
 const Works = () => {
   return (
     <div>
+      <NavRe/>
       <div className="m-0 p-0">
         <motion.div
           whileInView={{ y: 1, opacity: 1 }}
@@ -17,7 +19,7 @@ const Works = () => {
             stiffness: 40,
             ease: "easeOut",
           }}
-          className="landBg h-[300px] sm:h-[450px] flex justify-center items-center"
+          className="landBg pt-24 h-[300px] sm:h-[500px] flex justify-center items-center"
         >
           <div className="flex flex-col bg-primary shadow-primary/50 shadow-2xl bg-opacity-30 backdrop-blur-lg sm:py-16 px-10 py-5 sm:px-20 rounded-3xl items-center">
             <div className="text-5xl sm:text-7xl text-[#fafafa] font-bold">
@@ -29,7 +31,7 @@ const Works = () => {
           </div>
         </motion.div>
       </div>
-      <div className=" mt-24 flex justify-center mx-auto mb-14 sm:mb-14 text-5xl sm:text-7xl text-primary font-bold ">
+      <div className=" mt-20 flex justify-center mx-auto mb-14 sm:mb-14 text-5xl sm:text-7xl text-primary font-bold ">
         <motion.div
           whileInView={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}

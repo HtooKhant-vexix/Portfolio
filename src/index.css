@@ -9,12 +9,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(
-      0.25turn,
-    #5d14ac,
-    #bb119c,
-    #fe2f69
-  );
+  background: linear-gradient(0.25turn, #5d14ac, #bb119c, #fe2f69);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -40,9 +35,11 @@
 .landBg {
   background-image: url("./assets/geo.jpg");
   background-size: cover;
-
 }
-
+.cardbg {
+  background-image: url("./assets/primarybg.png");
+  background-size: cover;
+}
 
 * {
   cursor: url(./assets/cursor.svg), auto !important;
