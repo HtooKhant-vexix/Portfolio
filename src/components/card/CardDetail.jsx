@@ -22,7 +22,7 @@ const CardDetail = [
         className="object-cover  duration-100  group-hover:z-50 w-full object-center"
       />
     ),
-    logo: <img src={nftLogo} alt="err" className="p-2 h-[20px] " />,
+    logo: <img src={nftLogo} alt="err" className="p-2" />,
     dl: 0,
     git: "https://github.com/HtooKhant-vexix/NFT-Market",
     link: "https://nft-market-cyan.vercel.app",
@@ -111,7 +111,7 @@ const CardDetail = [
     api: false,
   },
   {
-    id: 6,
+    id: 7,
     title: "Foodie",
     desc: "Foodie website is a simple front-end project that using Html,Css,Javascript, Bootstrap and Wow.js",
     img: (

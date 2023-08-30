@@ -21,7 +21,7 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
 
   return (
     <>
-      <SwiperSlide className="mx-auto p-5">
+      <div className="mx-auto p-5">
         <motion.div
           whileInView={{ y: 1, opacity: 1 }}
           initial={{ y: "200px", opacity: 0 }}
@@ -35,8 +35,8 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
           className=""
         >
           <motion.div
-            onClick={strChange}
-            OnClick={reStrChange}
+            // onClick={strChange}
+            // OnClick={reStrChange}
             // onMouseEnter={strChange}
             // onMouseLeave={reStrChange}
             whileHover={{ scale: 1.05 }}
@@ -78,20 +78,19 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
                 )}
                 <br />
                 {/* {truncatedDesc.length > 80 && ( */}
-                <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
+                {/* <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
                   <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                   Front-end
                 </p>
-                {/* // )} */}
                 {api && (
                   <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
                     <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
                     Api
                   </p>
-                )}
+                )} */}
               </h3>
             </div>
-            <div className={updateClass}>
+            <div className="absolute w-full inset-x-0 duration-300 -translate-y-24 bg-white pb-5 rounded-b-3xl pt-32 bottom-[-80px] z-0">
               <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
               <div className="mt-3 justify-between w-full px-8 mx-1 flex">
                 <div className="text-primary flex items-center">
@@ -122,7 +121,7 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
         </motion.div>
 
         {/* second  */}
-      </SwiperSlide>
+      </div>
     </>
   );
 };

@@ -19,7 +19,7 @@ const Landing = () => {
       >
         <div className=" flex flex-col bg-primary shadow-primary/50 shadow-2xl bg-opacity-30 backdrop-blur-lg sm:py-16 px-10 py-5 sm:px-20 rounded-3xl items-center">
           <div className="text-5xl sm:text-7xl text-[#fafafa] font-bold">My Service</div>
-          <div className=" text-[#fafafa] mt-7 sm:text-2xl font-semibold  text-center">
+          <div className=" text-[#fafafa] mt-4 sm:mt-7 sm:text-2xl font-semibold  text-center">
             Craft and Build Web beyond creativity.
           </div>
         </div>
