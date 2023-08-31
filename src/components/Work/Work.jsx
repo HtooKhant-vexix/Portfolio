@@ -34,7 +34,7 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
           }}
           className=""
         >
-          <motion.div
+                <motion.div
             // onClick={strChange}
             // OnClick={reStrChange}
             // onMouseEnter={strChange}

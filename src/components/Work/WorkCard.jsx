@@ -7,7 +7,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const WorkCard = ({ img, logo, title, desc, git, link, api, dl,setSelectedId }) => {
+const WorkCard = ({
+  img,
+  logo,
+  title,
+  desc,
+  git,
+  link,
+  api,
+  dl,
+  setSelectedId,
+}) => {
   const [str, setStr] = useState(true);
   const [scroll, setScroll] = useState(0);
 
@@ -20,34 +30,21 @@ const WorkCard = ({ img, logo, title, desc, git, link, api, dl,setSelectedId }) 
   const updateClass =
     "absolute w-full inset-x-0 shadow-primary/50 shadow-2xl translate-y-0 duration-300 bg-white pb-5 rounded-b-3xl pt-32 bottom-[-80px] z-0";
 
-    const onClickHandler = () => setSelectedId(null);
+  const onClickHandler = () => setSelectedId(null);
 
   return (
     <>
-      <motion.div className="bg-primary bg-opacity-50 backdrop-blur-md w-full h-screen fixed top-0">
-        <div className="mx-auto w-[30%] p-5 mt-20">
+      <motion.div className="sm:hidden">
+        <div className="mx-auto w-[98%] xs:w-[85%] p-5 flex items-center ">
           <motion.div
-            // whileInView={{ y: 1, opacity: 1 }}
-            // initial={{ y: "200px", opacity: 0 }}
-            // // viewport={{ once: true }}
-            // transition={{
-            //   type: "spring",
-            //   stiffness: 40,
-            //   ease: "easeOut",
-            //   delay: dl,
-            // }}
-            className=""
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{
+              duration: 1,
+            }}
+            className="h-screen flex items-center"
           >
-            <motion.div
-              // onClick={strChange}
-              // OnClick={reStrChange}
-              // // onMouseEnter={strChange}
-              // // onMouseLeave={reStrChange}
-              // whileHover={{ scale: 1.05 }}
-              // // viewport={{ once: true }}
-              // transition={{ type: "spring", stiffness: 400 }}
-              className="w-[100%] group inline-block hover:shadow-primary/50 hover:shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white"
-            >
+            <motion.div className="w-[100%] group inline-block mt-[-90px] shadow-primary/50 shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white">
               <div className="relative py-1 z-40 px-1">
                 <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
                   {img}
@@ -63,33 +60,19 @@ const WorkCard = ({ img, logo, title, desc, git, link, api, dl,setSelectedId }) 
                   {title}
                 </h3>
                 <h3 className="text-primary text-lg">
-                  {/* {truncatedDesc}
-                {desc.length > 70 && (
-                  <p className="inline-block text-primary/60 group-hover:hidden">
-                    ... see more
-                  </p>
-                )}
-                <br />
-                <p className=" bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm  group-hover:inline-block hidden text-secondary">
-                  <DiCode className="me-1 inline-block text-2xl mx-auto my-auto" />
-                  Front-end
-                </p> */}
-
                   {desc}
-                  {/* {truncatedDesc} */}
-                  {/* {truncatedDesc.length < 80 && (
-                  <p className="inline-block text-primary/60 ">... see more</p>
-                )} */}
                   <br />
-                  {/* {truncatedDesc.length > 80 && ( */}
                   <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
                     <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                     Front-end
                   </p>
-                  <p onClick={onClickHandler} className="ms-5 hover:bg-primary hover:text-white bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary hover:border-primary inline-block px-2 text-xs text-secondary">
+                  <motion.button
+                    onClick={onClickHandler}
+                    className="ms-5 hover:bg-primary hover:text-white bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary hover:border-primary inline-block px-2 text-xs text-secondary"
+                  >
                     <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                     Cancel
-                  </p>
+                  </motion.button>
                   {/* // )} */}
                   {api && (
                     <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
@@ -112,7 +95,6 @@ const WorkCard = ({ img, logo, title, desc, git, link, api, dl,setSelectedId }) 
                       <AiFillGithub className="text-3xl" />
                       <p className="text-xl font-semibold ms-2">Git Repo</p>
                     </motion.a>
-                    {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
                   </div>
                   <a href={link}>
                     <motion.button
@@ -132,6 +114,132 @@ const WorkCard = ({ img, logo, title, desc, git, link, api, dl,setSelectedId }) 
           {/* second  */}
         </div>
       </motion.div>
+
+      {/* second */}
+
+      <motion.div className="hidden sm:block">
+        <div className="mx-auto w-[90%] lg:w-[80%] p-5 flex items-center ">
+          <motion.div
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{
+              duration: 1,
+            }}
+            className="h-screen flex items-center"
+          >
+            <motion.div
+              whileHover={{ scale: 1.01 }}
+              transition={{
+                type: "spring",
+                stiffness: 800,
+              }}
+              className="w-[100%] flex group hover:shadow-primary/30 hover:shadow-xl duration-100 relative rounded-3xl p-3  z-40 bg-white"
+            >
+              <div className=" w-[100%] py-1 z-40 flex my-auto px-1">
+                <div className=" object-cover overflow-hidden z-40 rounded-2xl">
+                  {img}
+                </div>
+                {/* {logo && (
+                  <div className="w-[70px] h-[70px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-6 rounded-xl absolute">
+                    {logo}
+                  </div>
+                )} */}
+              </div>
+              <div className="px-3 flex flex-col duration-200 bg-white z-30 relative ps-7  py-3 ">
+                <div className="">
+                  <h3 className="text-3xl flex items-center text-primary pb-2 font-semibold">
+                    {logo && (
+                      <div className="w-[70px] me-5  h-[70px] bg-white shadow-xl shadow-secondary/20 z-40 bottom-[-27px] right-6 rounded-xl">
+                        {logo}
+                      </div>
+                    )}
+                    {title}
+                  </h3>
+                  <div className="">
+                    <h3 className="text-primary w-[90%] mt-2 text-xl">
+                      {desc}
+                      <br />
+                      <p className=" bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary inline-block px-2 text-xs text-secondary">
+                        <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
+                        Front-end
+                      </p>
+                      <motion.button
+                        onClick={onClickHandler}
+                        className="ms-5 hover:bg-primary hover:text-white bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary hover:border-primary inline-block px-2 text-xs text-secondary"
+                      >
+                        <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
+                        Cancel
+                      </motion.button>
+                      {/* // )} */}
+                      {api && (
+                        <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
+                          <AiOutlineApi className="me-1 inline-block text-lg mx-auto my-auto" />
+                          Api
+                        </p>
+                      )}
+                    </h3>
+                  </div>
+                </div>
+                <div className="mt-auto justify-between w-full pe-4 mx-1 flex">
+                  <div className="text-primary flex items-center">
+                    <motion.a
+                      whileTap={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      href={git}
+                      className="hover:text-secondary my-auto  flex"
+                    >
+                      <AiFillGithub className="text-3xl" />
+                      <p className="text-xl font-semibold ms-2">Git Repo</p>
+                    </motion.a>
+                  </div>
+                  <a href={link}>
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      className="text-lg ms-auto p-2 cursor-none px-5 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
+                    >
+                      Live Demo
+                    </motion.button>
+                  </a>
+                </div>
+              </div>
+              {/* <div className={updateClass}>
+                <hr className="my-5 w-[90%] mx-auto h-[2px] bg-primary bg-opacity-50" />
+                <div className="mt-3 justify-between w-full px-8 mx-1 flex">
+                  <div className="text-primary flex items-center">
+                    <motion.a
+                      whileTap={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      href={git}
+                      className="hover:text-secondary my-auto  flex"
+                    >
+                      <AiFillGithub className="text-3xl" />
+                      <p className="text-xl font-semibold ms-2">Git Repo</p>
+                    </motion.a>
+                  </div>
+                  <a href={link}>
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      className="text-lg ms-auto p-2 cursor-none px-5 text-primary border hover:shadow-primary/50 hover:shadow-xl border-primary hover:bg-primary hover:text-white duration-100 rounded-lg"
+                    >
+                      Live Demo
+                    </motion.button>
+                  </a>
+                </div>
+              </div> */}
+            </motion.div>
+          </motion.div>
+
+          {/* second  */}
+        </div>
+      </motion.div>
+
+      {/* <motion.div className="hidden sm:block">
+
+      </motion.div> */}
     </>
   );
 };
