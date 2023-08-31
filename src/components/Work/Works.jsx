@@ -77,7 +77,7 @@ const Works = () => {
             {selectedId && (
               <motion.div
                 layoutId={selectedId}
-                className="detailed-card bg-primary/10 bg-opacity-50 backdrop-blur-md w-full h-screen"
+                className="detailed-card bg-primary/10 bg-opacity-30 backdrop-blur-md w-full h-screen"
                 exit={{ opacity: 0, scale: 0.5 }}
               >
                 {/* Render the details for the selected card */}

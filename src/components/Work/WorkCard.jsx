@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AiFillGithub, AiOutlineApi } from "react-icons/ai";
 import { DiCode } from "react-icons/di";
+import { RiCloseCircleFill } from "react-icons/ri";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -127,14 +128,7 @@ const WorkCard = ({
             }}
             className="h-screen flex items-center"
           >
-            <motion.div
-              whileHover={{ scale: 1.01 }}
-              transition={{
-                type: "spring",
-                stiffness: 800,
-              }}
-              className="w-[100%] flex group hover:shadow-primary/30 hover:shadow-xl duration-100 relative rounded-3xl p-3  z-40 bg-white"
-            >
+            <motion.div className="w-[100%] flex group shadow-primary/30 shadow-xl duration-100 relative rounded-3xl p-3  z-40 bg-white">
               <div className=" w-[100%] py-1 z-40 flex my-auto px-1">
                 <div className=" object-cover overflow-hidden z-40 rounded-2xl">
                   {img}
@@ -146,7 +140,13 @@ const WorkCard = ({
                 )} */}
               </div>
               <div className="px-3 flex flex-col duration-200 bg-white z-30 relative ps-7  py-3 ">
-                <div className="">
+                <div className="relative">
+                  <motion.button
+                    onClick={onClickHandler}
+                    className="ms-5 absolute right-[-30px] bg-white duration-150  hover:bg-secondary shadow-xl shadow-secondary/40 top-[-30px] rounded-full inline-block text-xs "
+                  >
+                    <RiCloseCircleFill className="text-5xl text-secondary hover:text-white duration-150" />
+                  </motion.button>
                   <h3 className="text-3xl flex items-center text-primary pb-2 font-semibold">
                     {logo && (
                       <div className="w-[70px] me-5  h-[70px] bg-white shadow-xl shadow-secondary/20 z-40 bottom-[-27px] right-6 rounded-xl">
@@ -163,13 +163,6 @@ const WorkCard = ({
                         <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                         Front-end
                       </p>
-                      <motion.button
-                        onClick={onClickHandler}
-                        className="ms-5 hover:bg-primary hover:text-white bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary hover:border-primary inline-block px-2 text-xs text-secondary"
-                      >
-                        <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
-                        Cancel
-                      </motion.button>
                       {/* // )} */}
                       {api && (
                         <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
