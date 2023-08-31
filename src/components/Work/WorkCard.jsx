@@ -55,6 +55,12 @@ const WorkCard = ({
                     {logo}
                   </div>
                 )}
+                <motion.button
+                  onClick={onClickHandler}
+                  className="ms-5 absolute right-[-25px] bg-white duration-150  hover:bg-secondary shadow-xl shadow-secondary/40 top-[-25px] rounded-full inline-block text-xs "
+                >
+                  <RiCloseCircleFill className="text-5xl text-secondary hover:text-white duration-150" />
+                </motion.button>
               </div>
               <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-7">
                 <h3 className="text-2xl text-primary w-[80%] pb-2 font-semibold">

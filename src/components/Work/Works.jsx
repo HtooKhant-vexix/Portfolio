@@ -36,7 +36,7 @@ const Works = () => {
             </div>
           </motion.div>
         </div>
-        <div className=" mt-20 flex justify-center mx-auto mb-14 sm:mb-14 text-5xl sm:text-7xl text-primary font-bold ">
+        <div className=" mt-16 md:mt-20 flex justify-center mx-auto  sm:mb-14 text-5xl sm:text-7xl text-primary font-bold ">
           <motion.div
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 100, opacity: 0 }}
@@ -52,7 +52,7 @@ const Works = () => {
             Recent Works
           </motion.div>
         </div>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20 p-10">
+        <div className=" md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20 p-10">
           {CardDetail.map(({ id, ...cardProps }) => (
             <motion.div
               layoutId={id}
@@ -77,7 +77,7 @@ const Works = () => {
             {selectedId && (
               <motion.div
                 layoutId={selectedId}
-                className="detailed-card bg-primary/10 bg-opacity-30 backdrop-blur-md w-full h-screen"
+                className="detailed-card bg-primary/10 bg-opacity-30 backdrop-blur-md w-full h-full"
                 exit={{ opacity: 0, scale: 0.5 }}
               >
                 {/* Render the details for the selected card */}

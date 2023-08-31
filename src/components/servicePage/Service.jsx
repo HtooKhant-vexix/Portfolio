@@ -72,7 +72,7 @@ const Service = () => {
               WHAT I DO
             </motion.div>
           </div>
-          <div className="grid w-[70%] mx-auto lg:gap-10 gap-5  sm:grid-cols-2">
+          <div className="grid w-[85%] sm:w-[70%] mx-auto lg:gap-10 gap-5  sm:grid-cols-2">
             {serviceDate.map(({ id, title, desc, img, dl }) => (
               <motion.div
                 whileInView={{ y: 0, opacity: 1 }}
