@@ -45,7 +45,7 @@ const WorkCard = ({
             }}
             className="h-screen flex items-center"
           >
-            <motion.div className="w-[100%] group inline-block mt-[-90px] shadow-primary/50 shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white">
+            <motion.div className="w-[100%] group inline-block mt-[-40px] shadow-primary/50 shadow-2xl duration-100 relative rounded-3xl p-3 z-40 bg-white">
               <div className="relative py-1 z-40 px-1">
                 <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
                   {img}

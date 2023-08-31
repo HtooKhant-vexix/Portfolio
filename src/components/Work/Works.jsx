@@ -52,7 +52,7 @@ const Works = () => {
             Recent Works
           </motion.div>
         </div>
-        <div className=" md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20 p-10">
+        <div className=" md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20 sm:p-10 pt-10">
           {CardDetail.map(({ id, ...cardProps }) => (
             <motion.div
               layoutId={id}

@@ -42,7 +42,7 @@ const Nav = () => {
     >
       <div className="w-full flex z-40 justify-center relative backdrop-blur-md bg-white bg-opacity-80 ">
         <div className="container  flex items-center">
-          <motion.div whileHover={{ scale: 1.1 }} className="">
+          <motion.div whileHover={{ scale: 1.1 }} className="ms-3">
             <img className="h-[70px]" src={logo} alt="" />
           </motion.div>
           <ul className="list-none sm:flex hidden text-primary justify-end items-center flex-1">
