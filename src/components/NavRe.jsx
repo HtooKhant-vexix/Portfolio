@@ -14,9 +14,10 @@ const Nav = () => {
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      if (window.scrollY >= lastScrollY) {
+      if (window.scrollY > lastScrollY) {
         // if scroll down hide the navbar
         setShow(true);
+        setChg(false);
       } else {
         // if scroll up show the navbar
         setShow(false);
@@ -39,9 +40,9 @@ const Nav = () => {
   }, [lastScrollY]);
   return (
     <div
-      className={`active ${
+      className={` ${
         show && "-translate-y-40"
-      } delay-500 duration-500 fixed w-full z-50`}
+      } delay-100 duration-500 fixed w-full z-50`}
     >
       <div className="w-full flex z-40 justify-center relative backdrop-blur-md bg-white bg-opacity-80 ">
         <div className="container relative flex items-center">
@@ -71,26 +72,30 @@ const Nav = () => {
               <HiMenu className="text-4xl duration-100 text-primary" />
             )}
           </div>
-          <div className="w-[90%] mx-auto bottom-[-450px] inset-x-0 rounded-xl bg-primary/50 backdrop-blur-md absolute">
-            {chg && !show ? (
-              <ul className="list-none text-primary justify-end text-center items-center flex-col">
-                {NavLinks.map((e) => (
-                  <NavLink to={`/${e.name}`} key={e.id}>
-                    {/* <a href={`/${e.name}`} key={e.id}> */}
-                    <motion.li
-                      // whileHover={{ scale: 1.2 }}
-                      // key={e.id}
-                      className="hover:text-secondary cursor-none duration-75 items-center py-8 text-sm font-semibold flex px-6 mr-2 font-poppins"
-                    >
-                      <div className="flex me-2 text-2xl">{e.icon}</div>
-                      {e.label}
-                    </motion.li>
-                    {/* </a> */}
-                  </NavLink>
-                ))}
-              </ul>
-            ) : null}
+          {/* {chg && !show ? ( */}
+          <div
+            className={`w-[90%] mx-auto ${
+              chg && !show && " translate-y-[330px] "
+            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-white/70 backdrop-blur-md fixed`}
+          >
+            <ul className="list-none sm:hidden grid grid-cols-2 gap-2 text-primary justify-end text-center items-center flex-col">
+              {NavLinks.map((e) => (
+                <NavLink to={`/${e.name}`} key={e.id}>
+                  {/* <a href={`/${e.name}`} key={e.id}> */}
+                  <motion.li
+                    // whileHover={{ scale: 1.2 }}
+                    // key={e.id}
+                    className="hover:text-secondary justify-center cursor-none duration-75 items-center text-sm font-semibold flex p-6 font-poppins"
+                  >
+                    <div className="flex me-2 text-2xl">{e.icon}</div>
+                    {e.label}
+                  </motion.li>
+                  {/* </a> */}
+                </NavLink>
+              ))}
+            </ul>
           </div>
+          {/* ) : null} */}
         </div>
       </div>
     </div>

@@ -75,10 +75,10 @@ const Nav = () => {
           {/* {chg && !show ? ( */}
           <div
             className={`w-[90%] mx-auto ${
-              chg && (!show) && " translate-y-[330px] "
-            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-white/50 backdrop-blur-md fixed`}
+              chg && !show && " translate-y-[330px] "
+            } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-white/70 backdrop-blur-md fixed`}
           >
-            <ul className="list-none grid grid-cols-2 gap-2 text-primary justify-end text-center items-center flex-col">
+            <ul className="list-none sm:hidden grid grid-cols-2 gap-2 text-primary justify-end text-center items-center flex-col">
               {NavLinks.map((e) => (
                 <NavLink to={`/${e.name}`} key={e.id}>
                   {/* <a href={`/${e.name}`} key={e.id}> */}
