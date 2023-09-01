@@ -85,6 +85,14 @@ const CardList = () => {
               <Card {...cardProps} />
             </SwiperSlide>
           ))}
+          <div
+            className="flex text-[1.1rem] justify-center ms-5 animate-fade-right animate-infinite animate-duration-[900ms] animate-ease-linear animate-alternate
+ font-normal text-primary/50 items-center mt-1"
+          >
+            Drag to see more{" "}
+            <FiChevronsRight className="text-xl ms-3 mt-1 flex z-50 " />
+            <FiChevronsRight className="text-xl ms-[-7px] mt-1 flex z-50 " />
+          </div>
         </Swiper>
       </motion.div>
     </>

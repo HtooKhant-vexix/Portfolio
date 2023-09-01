@@ -201,6 +201,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
           </div>
         </motion.div>
       </SwiperSlide>
+      
     </>
   );
 };
