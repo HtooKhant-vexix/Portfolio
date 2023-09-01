@@ -163,7 +163,7 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className="mt-[115px] sm:mt-28">
+      <div className="mt-[120px] sm:mt-28">
         <CardList />
         <Skill />
         <Mail />
