@@ -21,7 +21,7 @@ const Contact = () => {
           className="landBg pt-24 h-[300px] sm:h-[500px] flex justify-center items-center"
         >
           <div className="flex flex-col mx-4 bg-primary shadow-primary/50 shadow-2xl bg-opacity-30 backdrop-blur-lg sm:py-16 px-10 py-5 sm:px-20 rounded-3xl items-center">
-            <div className="text-5xl sm:text-7xl text-[#fafafa] font-bold">
+            <div className="text-4xl sm:text-7xl text-[#fafafa] font-bold">
               Get In Touch
             </div>
             <div className=" text-[#fafafa] mt-4 sm:mt-7 sm:text-2xl font-semibold  text-center">
@@ -31,7 +31,7 @@ const Contact = () => {
         </motion.div>
       </div>
       <div className="">
-        <div className=" mt-20 md:mt-24 flex justify-center mx-auto mb-8 sm:mb-10 text-5xl sm:text-7xl text-primary font-bold ">
+        <div className=" mt-20 md:mt-24 flex justify-center mx-auto mb-8 sm:mb-10 text-4xl sm:text-7xl text-primary font-bold ">
           <motion.div
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 100, opacity: 0 }}

@@ -5,7 +5,7 @@ import '../index.css'
 const Mail = () => {
   return (
     <div>
-      <div className="w-[80%] bg-white bg-opacity-30 h-[450px] md:h-[500px] mx-auto my-14 border border-white grid md:grid-cols-2 rounded-3xl">
+      <div className="w-[90%] sm:w-[80%] bg-white bg-opacity-30 h-[450px] md:h-[500px] mx-auto my-14 border border-white grid md:grid-cols-2 rounded-3xl">
         <div className=" hidden md:flex justify-center items-center">
           <img src={mail} alt="" className="p-16" />
         </div>
