@@ -14,7 +14,7 @@ const Nav = () => {
 
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY >= lastScrollY) {
         // if scroll down hide the navbar
         setShow(false);
         setChg(false);
