@@ -40,7 +40,9 @@
   background-image: url("./assets/primarybg.png");
   background-size: cover;
 }
-
+.active{
+  color: #FF3067 ;
+}
 * {
   cursor: url(./assets/cursor.svg), auto !important;
   /* cursor: url(./assets/pointer.svg), auto !important; */
