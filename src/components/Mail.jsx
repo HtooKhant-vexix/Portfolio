@@ -5,7 +5,7 @@ import '../index.css'
 const Mail = () => {
   return (
     <div>
-      <div className="w-[90%] sm:w-[80%] bg-white bg-opacity-30 h-[450px] md:h-[500px] mx-auto my-14 border border-white grid md:grid-cols-2 rounded-3xl">
+      <div className="w-[90%] sm:w-[80%] bg-white bg-opacity-30 h-[400px] sm:h-[450px] md:h-[500px] mx-auto my-14 border border-white grid md:grid-cols-2 rounded-3xl">
         <div className=" hidden md:flex justify-center items-center">
           <img src={mail} alt="" className="p-16" />
         </div>
@@ -13,7 +13,7 @@ const Mail = () => {
           <h1 className="text-3xl md:text-5xl font-bold mx-auto text-primary ">
             Get in Touch
           </h1>
-          <form className="w-[80%] lg:w-[80%] mt-10">
+          <form className="w-[80%] lg:w-[80%] mt-8 sm:mt-10">
             <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4">
               <input
                 type="text"
