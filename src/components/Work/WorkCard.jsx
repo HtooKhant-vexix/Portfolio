@@ -73,13 +73,6 @@ const WorkCard = ({
                     <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
                     Front-end
                   </p>
-                  <motion.button
-                    onClick={onClickHandler}
-                    className="ms-5 hover:bg-primary hover:text-white bg-opacity-30 pe-4 py-1 mt-3 rounded-full border border-secondary hover:border-primary inline-block px-2 text-xs text-secondary"
-                  >
-                    <DiCode className="me-1  inline-block text-lg mx-auto mt-[-1px]" />
-                    Cancel
-                  </motion.button>
                   {/* // )} */}
                   {api && (
                     <p className="ms-3 bg-opacity-30 py-1 mt-2 rounded-full border border-secondary px-3 text-sm inline-block text-secondary">
