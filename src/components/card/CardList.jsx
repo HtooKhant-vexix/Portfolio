@@ -87,7 +87,7 @@ const CardList = () => {
           ))}
           <div
             className="flex sm:hidden text-[1.1rem] justify-center ms-5 animate-fade-right animate-infinite animate-duration-[900ms] animate-ease-linear animate-alternate
- font-normal text-primary/50 items-center mt-[-10px]"
+ font-normal text-primary/50 items-center"
           >
             Drag to see more{" "}
             <FiChevronsRight className="text-xl ms-3 mt-1 flex z-50 " />
