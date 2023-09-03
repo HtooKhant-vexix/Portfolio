@@ -75,7 +75,7 @@ const Nav = () => {
           {/* {chg && !show ? ( */}
           <div
             className={`w-[90%] mx-auto ${
-              chg && !show && " translate-y-[330px] "
+              chg && !show ? "opacity-100 translate-y-[330px]" : "opacity-0"
             } mt-[-330px] z-30 inset-x-0 rounded-xl p-2 duration-500 bg-white/70 backdrop-blur-md fixed`}
           >
             <ul className="list-none sm:hidden grid grid-cols-2 gap-2 text-primary justify-end text-center items-center flex-col">

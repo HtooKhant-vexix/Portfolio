@@ -1,5 +1,5 @@
 import Home from "./Home.jsx";
-import About from "./About.jsx";
+import About from "./about/About.jsx";
 import Service from "./servicePage/Service.jsx";
 import Work from "./Work/Work.jsx";
 import Contact from "./Contact.jsx";
