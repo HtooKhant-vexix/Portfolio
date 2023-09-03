@@ -1,7 +1,7 @@
 const journeyList = [
   {
     id: 1,
-    date: "2021-2022",
+    date: "2019-2020",
     subTitle1: "Passed Matriculation.",
     subTitle2: "",
     subTitle3: "",
