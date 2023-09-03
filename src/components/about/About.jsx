@@ -76,7 +76,7 @@ const About = () => {
                   whileInView={{ opacity: 1, x: 1 }}
                   initial={{ opacity: 0, x: "-100%" }}
                   transition={{ type: "spring", stiffness: 50, delay: 0.3 }}
-                  className="font-poppins md:text-end text-center my-6 sm:my-10 font-bold text-primary leading-6 text-[30px] xs:text-[27px] ss:text-[30px] sm:text-[50px]"
+                  className="font-poppins md:text-end text-center my-6 sm:my-10 font-bold text-primary leading-6 text-[25px] xs:text-[27px] ss:text-[30px] sm:text-[50px]"
                 >
                   I'm Here To
                   <span className="text-gradient ms-2">Assist You</span>
