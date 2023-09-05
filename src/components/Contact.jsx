@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import NavRe from "./NavRe";
-import Mail from "./Mail";
+import Mail from "./Mail.jsx";
 
 const Contact = () => {
   return (
