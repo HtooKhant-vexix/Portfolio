@@ -102,13 +102,14 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                     transition={{ type: "spring", stiffness: 400 }}
                     href={git}
                     className="hover:text-secondary my-auto  flex"
+                    target="_blank"
                   >
                     <AiFillGithub className="text-3xl" />
                     <p className="text-xl font-semibold ms-2">Git Repo</p>
                   </motion.a>
                   {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
                 </div>
-                <a href={link}>
+                <a target="_blank" href={link}>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 1.2 }}
@@ -179,6 +180,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                   transition={{ type: "spring", stiffness: 400 }}
                   href={git}
                   className="hover:text-secondary my-auto  flex"
+                  target="_blank"
                 >
                   <AiFillGithub className="text-2xl" />
                   <p className="text-lg font-semibold ms-2 mt-[-1px]">
@@ -187,7 +189,7 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
                 </motion.a>
                 {/* <FaLink className="hover:text-secondary duration-100 my-auto ms-8 text-2xl" /> */}
               </div>
-              <a href={link}>
+              <a target="_blank" href={link}>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 1.2 }}
@@ -201,7 +203,6 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
           </div>
         </motion.div>
       </SwiperSlide>
-      
     </>
   );
 };

@@ -91,12 +91,13 @@ const WorkCard = ({
                       transition={{ type: "spring", stiffness: 400 }}
                       href={git}
                       className="hover:text-secondary my-auto  flex"
+                      target="_blank"
                     >
                       <AiFillGithub className="text-3xl" />
                       <p className="text-xl font-semibold ms-2">Git Repo</p>
                     </motion.a>
                   </div>
-                  <a href={link}>
+                  <a target="_blank" href={link}>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 1.2 }}
@@ -179,12 +180,13 @@ const WorkCard = ({
                       transition={{ type: "spring", stiffness: 400 }}
                       href={git}
                       className="hover:text-secondary my-auto  flex"
+                      target="_blank"
                     >
                       <AiFillGithub className="text-3xl" />
                       <p className="text-xl font-semibold ms-2">Git Repo</p>
                     </motion.a>
                   </div>
-                  <a href={link}>
+                  <a target="_blank" href={link}>
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 1.2 }}

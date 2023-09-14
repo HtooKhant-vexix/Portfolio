@@ -156,6 +156,7 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 500 }}
                 className="hover:text-secondary"
                 href={e.link}
+                target="_blank"
               >
                 {e.icon}
               </motion.a>
