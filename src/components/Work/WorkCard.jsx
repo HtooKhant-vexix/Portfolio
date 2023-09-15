@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 const WorkCard = ({
+  id,
   img,
   logo,
   title,
@@ -35,7 +36,7 @@ const WorkCard = ({
 
   return (
     <>
-      <motion.div className="sm:hidden">
+      <motion.div key={id} className="sm:hidden">
         <div className="mx-auto w-[98%] xs:w-[85%] p-5 flex items-center ">
           <motion.div
             whileInView={{ opacity: 1 }}

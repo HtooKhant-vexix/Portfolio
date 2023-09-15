@@ -55,6 +55,7 @@ const Works = () => {
         <div className=" md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20 sm:p-10 pt-10">
           {CardDetail.map(({ id, ...cardProps }) => (
             <motion.div
+              key={id}
               layoutId={id}
               onClick={() => setSelectedId(id)}
               // whileInView={{ y: 1, opacity: 1 }}
@@ -65,7 +66,6 @@ const Works = () => {
               //   stiffness: 40,
               //   ease: "easeOut",
               // }}
-              key={id}
               className=""
             >
               <Work {...cardProps} />
@@ -78,7 +78,8 @@ const Works = () => {
               <motion.div
                 layoutId={selectedId}
                 className="detailed-card bg-primary/10 bg-opacity-30 backdrop-blur-md w-full h-full"
-                exit={{ opacity: 0, scale: 0.5 }}
+                // className="detailed-card w-full h-full"
+                // exit={{ opacity: 0, scale: 0.5 }}
               >
                 {/* Render the details for the selected card */}
                 <motion.div className="">
