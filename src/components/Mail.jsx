@@ -1,9 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 // import mailBg from "../assets/mailBg.jpg";
 import mail from "../assets/mail.png";
 import "../index.css";
+import { motion } from "framer-motion";
+
 const Mail = () => {
+  const [notiShow, setNotiShow] = useState(false);
+  const variant = {
+   open: {opacity: 1, y:-140},
+   close: { opacity: 0, y:0 }
+
+  }
+  const noti = () => {
+   setNotiShow(true);
+
+    setTimeout(()=>{
+      setNotiShow(false)
+    },1000)
+  };
+  // const inRef = useRef();
+  // console.log(inRef);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,7 +35,7 @@ const Mail = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("ok");
+          // console.log("ok");
         },
         (error) => {
           console.log(error.text);
@@ -44,12 +61,14 @@ const Mail = () => {
           >
             <div className="grid grid-cols-2 md:grid-cols-2 gap-x-4">
               <input
+                // ref={inRef}
                 name="first_name"
                 type="text"
                 className="rounded-md placeholder:text-primary/40 bg-primary/20 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
                 placeholder="First Name"
               />
               <input
+                // ref={inRef}
                 name="last_name"
                 type="text"
                 className="rounded-md placeholder:text-primary/40 bg-primary/20 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
@@ -69,14 +88,23 @@ const Mail = () => {
               className="block p-2.5 w-full placeholder:text-primary/40 bg-primary/20 mt-3 text-gray-900 bg-gray-50 outline-none rounded-lg border focus:ring-2 focus:ring-primary   border-gray-300 "
               placeholder="Leave a comment..."
             ></textarea>
-            <button
+            <motion.button
+              onClick={()=>noti()}
+              whileTap={{ backgroundColor: "#3B2A8290" }}
               type="submit"
               value="Send"
               className="text-semibold text-lg w-full py-2 text-white bg-primary   mt-3 rounded-lg"
             >
               Send Message
-            </button>
+            </motion.button>
           </form>
+          {/* noti  */}
+          {notiShow && (
+            <motion.div
+            variants={variant}
+            animate={notiShow?"open":"close"}
+            className="bg-red-300 w-[300px] me-4 rounded-md fixed right-0 top-40 z-50  h-20"></motion.div>
+          )}
         </div>
       </div>
     </div>

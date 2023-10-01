@@ -68,7 +68,7 @@ const CardDetail = [
   {
     id: 5,
     title: "Api Mini Pj",
-    desc: "CRUD practice project with  API integration and state management with useReducer hook.",
+    desc: "CRUD practice project with  API integration and state management with Redux tookit.",
     img: (
       <img
         src={api}
@@ -78,8 +78,8 @@ const CardDetail = [
     ),
     logo: false,
     dl: 0.2,
-    git: "https://github.com/HtooKhant-vexix/react-ecommerce.git",
-    link: "https://famous-seahorse-caaef7.netlify.app/",
+    git: "https://github.com/HtooKhant-vexix/rtk-pra",
+    link: "https://rtk-pra.vercel.app/",
     api: true,
   },
   {
