@@ -12,13 +12,13 @@ const Mail = () => {
    close: { opacity: 0, y:0 }
 
   }
-  const noti = () => {
-   setNotiShow(true);
+  // const noti = () => {
+  //  setNotiShow(true);
 
-    setTimeout(()=>{
-      setNotiShow(false)
-    },1000)
-  };
+  //   setTimeout(()=>{
+  //     setNotiShow(false)
+  //   },1000)
+  // };
   // const inRef = useRef();
   // console.log(inRef);
   const form = useRef();
@@ -34,6 +34,11 @@ const Mail = () => {
       )
       .then(
         (result) => {
+             setNotiShow(true);
+
+             setTimeout(() => {
+               setNotiShow(false);
+             }, 1000);
           console.log(result.text);
           // console.log("ok");
         },
@@ -66,6 +71,7 @@ const Mail = () => {
                 type="text"
                 className="rounded-md placeholder:text-primary/40 bg-primary/20 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
                 placeholder="First Name"
+                required
               />
               <input
                 // ref={inRef}
@@ -73,6 +79,7 @@ const Mail = () => {
                 type="text"
                 className="rounded-md placeholder:text-primary/40 bg-primary/20 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
                 placeholder="Last Name"
+                required
               />
             </div>
             <input
@@ -80,6 +87,7 @@ const Mail = () => {
               type="email"
               className="rounded-md w-full placeholder:text-primary/40 bg-primary/20 mt-3 outline-none border-none py-2 ps-3 focus:border focus:ring-2 focus:ring-primary"
               placeholder="Email address "
+              required
             />
             <textarea
               // id="message"
@@ -87,9 +95,10 @@ const Mail = () => {
               rows="4"
               className="block p-2.5 w-full placeholder:text-primary/40 bg-primary/20 mt-3 text-gray-900 bg-gray-50 outline-none rounded-lg border focus:ring-2 focus:ring-primary   border-gray-300 "
               placeholder="Leave a comment..."
+              required
             ></textarea>
             <motion.button
-              onClick={()=>noti()}
+              // onClick={()=>noti()}
               whileTap={{ backgroundColor: "#3B2A8290" }}
               type="submit"
               value="Send"
