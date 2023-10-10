@@ -11,11 +11,12 @@ const Contact = [
     id: 3,
     icon: <BiLogoGmail />,
     link: "",
+    to: "/Contact"
   },
   {
     id: 1,
     icon: <FaLinkedin />,
-    link: "",
+    link: "https://www.linkedin.com/in/htoo-khant-675a6b271/",
   },
 ];
 

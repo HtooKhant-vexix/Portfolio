@@ -5,7 +5,7 @@ import Text from "./Text";
 
 const Skill = () => {
   return (
-    <div className="bg-primary/30 mt-[-180px] sm:mt-[-90px] text-center">
+    <div className="bg-primary/30 mt-[-180px] sm:mt-[-100px] text-center">
       <motion.div
         whileInView={{ scale: 1, opacity: 1 }}
         initial={{ scale: 0, opacity: 0 }}

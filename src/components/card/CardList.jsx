@@ -46,7 +46,7 @@ const CardList = () => {
           </motion.h1>
         </div>
         <Swiper
-          className="mySwiperf justify-center z-0 flex mx-auto min-h-[680px] "
+          className="mySwiperf justify-center z-0 flex mx-auto min-h-[710px] "
           slidesPerView={1}
           spaceBetween={10}
           pagination={{
