@@ -150,18 +150,30 @@ const Home = () => {
           className="absolute bottom-[-35px] h-16 inset-x-0"
         >
           <div className="flex w-[200px]  shadow-2xl shadow-primary/50 px-4 text-primary items-center justify-around text-[2rem] bg-white rounded-full h-full mx-auto">
-            {Contact.map((e) => (
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 500 }}
-                className="hover:text-secondary"
-                href={e.link}
-                to={e.to}
-                target="_blank"
-              >
-                {e.icon}
-              </motion.a>
-            ))}
+            {Contact.map((e) =>
+              e.to ? (
+                <NavLink
+                  to="/Contact"
+                  // whileHover={{ scale: 1.1 }}
+                  // transition={{ type: "spring", stiffness: 500 }}
+                  className="hover:text-secondary hover:scale-110"
+                  // href={e.link}
+                  // target="_blank"
+                >
+                  {e.icon}
+                </NavLink>
+              ) : (
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+                  className="hover:text-secondary"
+                  href={e.link}
+                  target="_blank"
+                >
+                  {e.icon}
+                </motion.a>
+              )
+            )}
           </div>
         </motion.div>
       </div>
