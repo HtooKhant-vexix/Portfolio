@@ -48,9 +48,11 @@ const Card = ({ img, logo, title, desc, git, link, api, dl }) => {
               <div className=" object-cover overflow-hidden z-40 rounded-t-2xl">
                 {img}
               </div>
-              <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-8 rounded-xl absolute">
-                {logo}
-              </div>
+              {logo && (
+                <div className="w-[80px] h-[80px] bg-white shadow-xl shadow-secondary/10 z-40 bottom-[-27px] right-8 rounded-xl absolute">
+                  {logo}
+                </div>
+              )}
             </div>
             <div className="px-3 duration-200 bg-white z-30 relative pb-3 pt-7">
               <h3 className="text-2xl text-primary w-[80%] pb-2 font-semibold">

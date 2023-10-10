@@ -17,7 +17,7 @@ import pos from "../../assets/pos.png";
 const CardDetail = [
   {
     id: 8,
-    title: "POS Software",
+    title: "POS System",
     desc: "A POS website streamlines sales operations by managing inventory, creating receipts, and analyzing sales data. It enhances customer service, optimizes the sales process, and boosts operational efficiency for both retail and service businesses.",
     img: (
       <img
@@ -45,7 +45,7 @@ const CardDetail = [
       />
     ),
     logo: <img src={nftLogo} alt="err" className="p-2" />,
-    dl: 0,
+    dl: 0.2,
     git: "https://github.com/liansun96/NFT-Marketplace-Team",
     // git: "https://github.com/HtooKhant-vexix/NFT-Market",
     link: "https://nft-market-cyan.vercel.app",
@@ -62,7 +62,7 @@ const CardDetail = [
       />
     ),
     logo: <img src={nftmak} alt="err" className="p-2 " />,
-    dl: 0.2,
+    dl: 0.4,
     // git: "https://github.com/HtooKhant-vexix/NFT-Marketplace-Dashboard",
     git: "https://github.com/liansun96/NFT-Marketplace-Dashboard",
     link: "https://nft-marketplace-dashboard-red.vercel.app",
@@ -79,7 +79,7 @@ const CardDetail = [
       />
     ),
     logo: <img src={dashlylogo} alt="err" className="p-2 " />,
-    dl: 0.4,
+    dl: 0,
     // git: "https://github.com/HtooKhant-vexix/Dashly-Dashboad",
     git: "https://github.com/chanmyae-aung/dashly-dashboard-team-i",
     link: "https://dashly-dashboad.vercel.app",
@@ -129,7 +129,7 @@ const CardDetail = [
         className="object-cover  duration-100  group-hover:z-50 w-full object-center"
       />
     ),
-    dl: 0.4,
+    dl: 0,
     logo: <img src={book} alt="err" className="p-2 flex mt-7" />,
     git: "https://github.com/HtooKhant-vexix/Bookmark",
     link: "https://6504b4a425bea321149fd34e--bright-faun-75d155.netlify.app",
@@ -146,7 +146,7 @@ const CardDetail = [
         className="object-cover  duration-100  group-hover:z-50 w-full object-center"
       />
     ),
-    dl: 0,
+    dl: 0.2,
     logo: <img src={gcLogo} alt="err" className="p-2 " />,
     // git: "https://github.com/HtooKhant-vexix/Google-Contact-clone",
     git: "https://github.com/Hk-Ko/contact-app-clone",
