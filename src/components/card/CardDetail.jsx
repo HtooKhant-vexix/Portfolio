@@ -12,8 +12,27 @@ import foodie from "../../assets/foodie.png";
 import foodieIcon from "../../assets/ficon.png";
 import book from "../../assets/book.jpg";
 import bookcv from "../../assets/bookcv.png";
+import pos from "../../assets/pos.png";
 
 const CardDetail = [
+  {
+    id: 8,
+    title: "POS Software",
+    desc: "A POS website streamlines sales operations by managing inventory, creating receipts, and analyzing sales data. It enhances customer service, optimizes the sales process, and boosts operational efficiency for both retail and service businesses.",
+    img: (
+      <img
+        src={pos}
+        alt="err"
+        className="object-cover  duration-100  group-hover:z-50 w-full object-center"
+      />
+    ),
+    // logo: <img src={pos} alt="err" className="p-2" />,
+    dl: 0,
+    git: "https://github.com/HeinZarNe/workshop-pos",
+    // git: "https://github.com/HtooKhant-vexix/NFT-Market",
+    link: "https://beautiful-cocada-242c1f.netlify.app/",
+    api: true,
+  },
   {
     id: 1,
     title: "NFT Marketplace",
