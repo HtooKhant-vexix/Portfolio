@@ -18,7 +18,7 @@ const CardDetail = [
   {
     id: 8,
     title: "POS System",
-    desc: "A POS website streamlines sales operations by managing inventory, creating receipts, and analyzing sales data. It enhances customer service, optimizes the sales process, and boosts operational efficiency for both retail and service businesses.",
+    desc: "A POS website streamlines sales operations by managing inventory, creating receipts, and analyzing sales data.",
     img: (
       <img
         src={pos}

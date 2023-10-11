@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Mail = () => {
   const [notiShow, setNotiShow] = useState(false);
   const variant = {
-   open: {opacity: 1, y:-140},
+   open: {opacity: 1, y:-300},
    close: { opacity: 0, y:0 }
 
   }
@@ -22,6 +22,8 @@ const Mail = () => {
   // const inRef = useRef();
   // console.log(inRef);
   const form = useRef();
+  // console.log();
+  // console.log(form.current.map((e)=>console.log(e)));
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -35,10 +37,13 @@ const Mail = () => {
       .then(
         (result) => {
              setNotiShow(true);
-
+            form.current[0].value = "";
+            form.current[1].value = "";
+            form.current[2].value = "";
+            form.current[3].value = "";
              setTimeout(() => {
                setNotiShow(false);
-             }, 1000);
+             }, 2500);
           console.log(result.text);
           // console.log("ok");
         },
@@ -112,7 +117,7 @@ const Mail = () => {
             <motion.div
             variants={variant}
             animate={notiShow?"open":"close"}
-            className="bg-red-300 w-[300px] me-4 rounded-md fixed right-0 top-40 z-50  h-20"></motion.div>
+            className="bg-white  me-4 rounded-md fixed right-0 px-12 py-5 top-80 text-xl text-secondary shadow-2xl shadow-secondary/20 border border-secondary font-semibold z-50 font-mono"> Mail has been sent !</motion.div>
           )}
         </div>
       </div>
