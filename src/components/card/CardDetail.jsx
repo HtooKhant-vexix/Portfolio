@@ -30,7 +30,7 @@ const CardDetail = [
     dl: 0,
     git: "https://github.com/HeinZarNe/workshop-pos",
     // git: "https://github.com/HtooKhant-vexix/NFT-Market",
-    link: "https://beautiful-cocada-242c1f.netlify.app/",
+    link: "https://pos-eta.vercel.app/",
     api: true,
   },
   {
