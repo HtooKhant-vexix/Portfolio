@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, lazy, Suspense } from "react";
 import logo from "../assets/logo2.png";
 import { motion } from "framer-motion";
 import pfp from "../assets/PFP.webp";
@@ -6,22 +6,18 @@ import { NavLink } from "react-router-dom";
 import NavLinks from "../constants/Index";
 import Contact from "../constants/Contact";
 import { FiChevronsRight } from "react-icons/fi";
-import Works from "./Work/Works";
 import "../index.css";
-import { useState } from "react";
-// import CardGrid from "./CardGrid";
-import CardList from "./card/CardList";
-import SkillText from "./Skill/SkillText";
-import Skill from "./Skill/Skill";
-import Text from "./Skill/Text";
-import Mail from "./Mail.jsx";
-import ScrollToTop from "./ScrollToTop";
 import Nav from "./Nav";
 
 const list = {
   open: { x: 2, opacity: 1 },
   close: { x: "-30%", opacity: 0 },
 };
+
+const CardList = lazy(() => import("./card/CardList"));
+const Skill = lazy(() => import("./Skill/Skill"));
+const Mail = lazy(() => import("./Mail.jsx"));
+
 const Home = () => {
   const [state, setState] = useState(false);
 
@@ -38,7 +34,15 @@ const Home = () => {
           className="absolute"
         >
           <div className=" justify-center hidden sm:flex   z-10 items-start flex-col">
-            <img className="h-[70px] mb-4 ml-4 z-0" src={logo} alt="" />
+            <picture>
+              <source srcSet={logo} media="(min-width: 600px)" />
+              <img
+                className="h-[70px] mb-4 ml-4 z-0"
+                src={logo}
+                alt="logo"
+                loading="lazy"
+              />
+            </picture>
             <ul
               onMouseEnter={() => {
                 setState(true);
@@ -49,7 +53,7 @@ const Home = () => {
               className="list-none z-0  mt-16 md:mt-0   w-[150px] items-start flex-col text-primary justify-center flex-1"
             >
               {NavLinks.map((e) => (
-                <NavLink to={`/${e.name}`}>
+                <NavLink to={`/${e.name}`} key={e.id}>
                   <li
                     key={e.id}
                     className="hover:text-secondary group rounded-lg w-full  hover:bg-white duration-100 ms-2 me-4 my-1 text-sm font-semibold flex items-center mr-2 font-poppins"
@@ -74,20 +78,15 @@ const Home = () => {
         {/* hero */}
         <div className="justify-around flex-wrap flex w-full mx-auto">
           <div className="md:me-[-60px] w-[32rem] lg:me-[-140px]">
-            <motion.img
-              whileInView={{ x: 1, opacity: 1 }}
-              initial={{ x: "-100%", opacity: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                type: "spring",
-                stiffness: 40,
-                delay: 0.4,
-                ease: "easeOut",
-              }}
-              src={pfp}
-              className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
-              alt=""
-            />
+            <picture>
+              <source srcSet={pfp} media="(min-width: 600px)" />
+              <img
+                src={pfp}
+                className="w-[100%] z-50 mb-5 sm:mb-10 md:mb-0"
+                alt="profile"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <motion.div
             whileInView={{ x: 1, opacity: 1 }}
@@ -112,8 +111,9 @@ const Home = () => {
               </h1>
               <h1 className="text-primary pt-1 sm:pt-0 xs:w-[85%] sm:w-[95%] mx-auto flex w-[100%] md:w-[98%] lg:[100%] text-[17px] text-center md:text-start ss:text-[20px] sm:text-[25px] md:text-[25px]">
                 My mission as a frontend developer is simple yet powerful: to
-                bring your vision to life. Your success is my success, and I'm
-                committed to delivering results that exceed your expectations.
+                bring your vision to life. Your success is my success, and
+                I&apos;m committed to delivering results that exceed your
+                expectations.
               </h1>
               <NavLink to={"/service"}>
                 <div className="flex justify-center md:justify-start">
@@ -126,11 +126,11 @@ const Home = () => {
                   >
                     <FiChevronsRight className="text-2xl top-0 bottom-0 h-full absolute right-[-20px] group-hover:animate-fade-right group-hover:animate-infinite  hidden group-hover:flex z-50 " />
                     <div
-                      style={{ "transform-origin": "left center" }}
+                      style={{ transformOrigin: "left center" }}
                       className="group-hover:bg-primary duration-300 transition-transform transform group-hover:translate-x-8 absolute w-4 h-full z-10 inset-y-0 right-0 rounded-r-xl "
                     ></div>
                     <div
-                      style={{ "transform-origin": "left center" }}
+                      style={{ transformOrigin: "left center" }}
                       className="group-hover:bg-primary duration-300 cs transition-transform  transform group-hover:scale-x-[5.2] absolute w-2 h-full z-10 inset-y-0 right-3 "
                     ></div>
                     {/* View Works */}
@@ -154,16 +154,14 @@ const Home = () => {
               e.to ? (
                 <NavLink
                   to="/Contact"
-                  // whileHover={{ scale: 1.1 }}
-                  // transition={{ type: "spring", stiffness: 500 }}
+                  key={e.id}
                   className="hover:text-secondary hover:scale-110"
-                  // href={e.link}
-                  // target="_blank"
                 >
                   {e.icon}
                 </NavLink>
               ) : (
                 <motion.a
+                  key={e.id}
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 500 }}
                   className="hover:text-secondary"
@@ -178,9 +176,11 @@ const Home = () => {
         </motion.div>
       </div>
       <div className="mt-[120px] sm:mt-28">
-        <CardList />
-        <Skill />
-        <Mail />
+        <Suspense fallback={<div>Loading...</div>}>
+          <CardList />
+          <Skill />
+          <Mail />
+        </Suspense>
       </div>
     </>
   );

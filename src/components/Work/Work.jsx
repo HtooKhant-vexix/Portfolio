@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { AiFillGithub, AiOutlineApi } from "react-icons/ai";
 import { DiCode } from "react-icons/di";
-import { SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 
-const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
+const Work = React.memo(({ img, logo, title, desc, git, link, api, dl }) => {
   const [str, setStr] = useState(true);
 
-  const strChange = () => setStr((prevStr) => !prevStr);
-  const reStrChange = () => setStr((prevStr) => !prevStr);
+  const strChange = useCallback(() => setStr((prevStr) => !prevStr), []);
+  const reStrChange = useCallback(() => setStr((prevStr) => !prevStr), []);
 
   const truncatedDesc = str ? `${desc.substring(0, 70)}` : desc;
   const normalClass =
@@ -125,6 +121,6 @@ const Work = ({ img, logo, title, desc, git, link, api, dl }) => {
       </div>
     </>
   );
-};
+});
 
 export default Work;

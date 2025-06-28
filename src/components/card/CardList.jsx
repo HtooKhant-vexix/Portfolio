@@ -2,7 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 import Card from "./Card.jsx";
 import CardDetail from "./CardDetail.jsx";
 import "./card.css";
@@ -70,18 +69,7 @@ const CardList = () => {
           // className="mySwiper"
         >
           {CardDetail.slice(0, 4).map(({ id, ...cardProps }) => (
-            <SwiperSlide
-              whileInView={{ y: 1, opacity: 1 }}
-              initial={{ y: "200px", opacity: 0 }}
-              // viewport={{ once: true }}
-              transition={{
-                type: "spring",
-                stiffness: 40,
-                ease: "easeOut",
-              }}
-              key={id}
-              className=""
-            >
+            <SwiperSlide key={id} className="">
               <Card {...cardProps} />
             </SwiperSlide>
           ))}

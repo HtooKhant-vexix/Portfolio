@@ -5,7 +5,6 @@ import CardDetail from "../card/CardDetail.jsx";
 import Work from "./Work.jsx";
 import NavRe from "../NavRe.jsx";
 import { useState } from "react";
-import Title from "antd/es/skeleton/Title.js";
 import WorkCard from "./WorkCard.jsx";
 
 const Works = () => {
@@ -96,7 +95,7 @@ const Works = () => {
                   })()}
                 </motion.div>
 
-                <motion.button onClick={() => setSelectedId(null)}/>
+                <motion.button onClick={() => setSelectedId(null)} />
               </motion.div>
             )}
           </AnimatePresence>

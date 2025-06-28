@@ -8,10 +8,9 @@ import { motion } from "framer-motion";
 const Mail = () => {
   const [notiShow, setNotiShow] = useState(false);
   const variant = {
-   open: {opacity: 1, y:-300},
-   close: { opacity: 0, y:0 }
-
-  }
+    open: { opacity: 1, y: -300 },
+    close: { opacity: 0, y: 0 },
+  };
   // const noti = () => {
   //  setNotiShow(true);
 
@@ -36,14 +35,14 @@ const Mail = () => {
       )
       .then(
         (result) => {
-             setNotiShow(true);
-            form.current[0].value = "";
-            form.current[1].value = "";
-            form.current[2].value = "";
-            form.current[3].value = "";
-             setTimeout(() => {
-               setNotiShow(false);
-             }, 2500);
+          setNotiShow(true);
+          form.current[0].value = "";
+          form.current[1].value = "";
+          form.current[2].value = "";
+          form.current[3].value = "";
+          setTimeout(() => {
+            setNotiShow(false);
+          }, 2500);
           console.log(result.text);
           // console.log("ok");
         },
@@ -115,9 +114,13 @@ const Mail = () => {
           {/* noti  */}
           {notiShow && (
             <motion.div
-            variants={variant}
-            animate={notiShow?"open":"close"}
-            className="bg-white  me-4 rounded-md fixed right-0 px-12 py-5 top-80 text-xl text-secondary shadow-2xl shadow-secondary/20 border border-secondary font-semibold z-50 font-mono"> Mail has been sent !</motion.div>
+              variants={variant}
+              animate={notiShow ? "open" : "close"}
+              className="bg-white  me-4 rounded-md fixed right-0 px-12 py-5 top-80 text-xl text-secondary shadow-2xl shadow-secondary/20 border border-secondary font-semibold z-50 font-mono"
+            >
+              {" "}
+              Mail has been sent !
+            </motion.div>
           )}
         </div>
       </div>

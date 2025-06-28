@@ -156,4 +156,6 @@ const CardDetail = [
   },
 ];
 
+// NOTE: If this array grows large, consider using virtualization in CardList for performance.
+
 export default CardDetail;
