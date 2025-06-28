@@ -31,7 +31,53 @@ function App() {
       <div className=" w-full overflow-hidden bg-img app">
         {/* <div className="fixed w-full"> */}
         <Wrapper>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  width: "100vw",
+                  height: "100vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "rgba(255,255,255,0.85)",
+                  zIndex: 9999,
+                }}
+              >
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="animate-spin mb-4"
+                >
+                  <circle
+                    cx="24"
+                    cy="24"
+                    r="20"
+                    stroke="#6366F1"
+                    strokeWidth="4"
+                    strokeDasharray="31.4 31.4"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <span
+                  style={{
+                    color: "#6366F1",
+                    fontWeight: 600,
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  Loading...
+                </span>
+              </div>
+            }
+          >
             <Routes>
               <Route index element={<Home />} />
               <Route path="home" element={<Home />} />
